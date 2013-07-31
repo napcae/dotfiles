@@ -2,16 +2,7 @@
 
 My OS X / Ubuntu dotfiles.
 
-## Why is this a git repo?
-
-I've been using bash on-and-off for a long time (since Slackware Linux was distributed on 1.44MB floppy disks). In all that time, every time I've set up a new Linux or OS X machine, I've copied over my `.bashrc` file and my `~/bin` folder to each machine manually. And I've never done a very good job of actually maintaining these files. It's been a total mess.
-
-I finally decided that I wanted to be able to execute a single command to "bootstrap" a new system to pull down all of my dotfiles and configs, as well as install all the tools I commonly use. In addition, I wanted to be able to re-execute that command at any time to synchronize anything that might have changed. Finally, I wanted to make it easy to re-integrate changes back in, so that other machines could be updated.
-
-That command is [~/bin/dotfiles][dotfiles], and this is my "dotfiles" Git repo.
-
-[dotfiles]: https://github.com/cowboy/dotfiles/blob/master/bin/dotfiles
-[bin]: https://github.com/cowboy/dotfiles/tree/master/bin
+These dotfiles are forked from "Cowboy" Ben Alman
 
 ## What, exactly, does the "dotfiles" command do?
 
@@ -39,7 +30,7 @@ Notes:
 * You need to have installed [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a separate, optional (and _much smaller_) download from XCode.
 
 ```sh
-bash -c "$(curl -fsSL https://raw.github.com/cowboy/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ### Ubuntu
@@ -50,7 +41,7 @@ Notes:
 
 ```sh
 sudo apt-get -qq update && sudo apt-get -qq upgrade && sudo apt-get -qq install curl && echo &&
-bash -c "$(curl -fsSL https://raw.github.com/cowboy/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ## The "init" step

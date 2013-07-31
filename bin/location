@@ -1,0 +1,99 @@
+#!/bin/sh
+
+function getLocation() {
+	networksetup -getcurrentlocation
+
+	if [ "$1" = "Home" ]
+	then 
+		return 0; #Ich bin zu Hause
+	else
+		return 1; #nicht zu Hause
+	fi
+}
+
+function location_change() {
+	if [ "$loc" = "Home" ]
+ 		then
+			sudo networksetup -switchtolocation Outside > /dev/null;
+			terminal-notifier -message 'changed to Outside' -title 'Location' > /dev/null;
+		elif [ "$loc" = "Outside" ]
+		then
+			sudo networksetup -switchtolocation Home > /dev/null;
+			terminal-notifier -message 'changed to Home' -title 'Location' > /dev/null
+	fi
+}
+
+#testet, ob eine internetverbindung besteht
+#wenn ja, rückgabecode 0(true), sonst 1(false)
+function isConnected() { 
+	ping -c 1 www.google.de | grep -e "0.0% packet loss" > /dev/null;
+	if [ $? = 0 ]
+		then
+			# ja, internet 
+			return 0;
+		else
+			# nein, kein internet
+			return 1;
+	fi
+}
+
+#testet, ob man mit Home verbunden ist
+#wenn ja, rückgabecode 0(true), sonst 1(false)
+#function getLocation() {
+#	networksetup -getinfo Wi-Fi | grep 'IP address: 192' > /dev/null;
+#	if [ $? = 0 ]
+#		then 
+#			return 0;
+#		else
+#			return 1;
+#	fi
+#}
+
+#kombiniert isConnected und getLocation 
+function changeLocation() {
+	getLocation
+	if [ $? = 0 ]
+		then
+			isConnected
+			if [ $? = 0 ]
+				then
+					return 0;echo "not changed";
+				else
+					sudo networksetup -switchtolocation Outside > /dev/null;
+		    			terminal-notifier -message 'changed to Outside' -title 'Location' > /dev/null;
+			fi
+	elif [ $? = 1 ] 
+		then
+			isConnected
+			if [ $? = 0 ]
+				then
+					return 0;echo "not changed";
+		  
+				else 
+					sudo networksetup -switchtolocation Home > /dev/null;
+		    			terminal-notifier -message 'changed to Home' -title 'Location' > /dev/null;
+
+				fi
+		
+	fi		
+	
+}
+
+
+if [ "$1" = "get" ] || [ "$1" = "--get" ] || [ "$1" = "-g" ] || [ "$1" = "get" ]  
+	then 
+		getLocation;
+elif [ "$1" = "change" ] || [ "$1" = "" ]  
+	then 
+		changeLocation; echo "test";
+elif [ "$1" = "help" ]  || [ "$1" = "--help" ] || [ "$1" = "-h" ] || [ "$1" = "help" ]  || [ "$1" = "-?" ]  
+	then 
+		echo "help" #implement help function
+fi
+#todo
+#wenn airport aus ist, anmachen
+
+#loc=`networksetup -getcurrentlocation`
+#echo "Current Location is '$loc'"
+#location_change;
+

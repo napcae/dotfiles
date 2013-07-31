@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#echo "Using SSH, are you shure?";
+
+#for i in {3..1}
+#do
+#	echo $i
+#	#sleep 1
+#	read -t 1 answer
+#done
+
+#if [ $i == 1 ]
+#then
+
+#answer="n";
+#else
+
+#read answer;
+#fi
+
+
+
+#answer="y";
+read -t 3 -p "Using SSH, are you shure? " answer;
+if [ "$answer" == "y" ]
+then 
+	echo "ssh'd";
+	ssh $1;
+	else
+	echo "moshed";
+	mosh $1;
+	
+fi
+

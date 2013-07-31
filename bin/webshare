@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ifconfig en0 | grep -oE "(\d+\.){3}\d+";
+python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"

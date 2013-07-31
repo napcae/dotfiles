@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" == "wake" ]
+then
+	ssh -f 192.168.42.2 /usr/local/bin/cust/hibernate -wake
+else
+	ssh -f 192.168.42.2 /Applications/SleepDisplay.app/Contents/MacOS/sleepdisplay
+fi

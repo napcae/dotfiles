@@ -1,0 +1,9 @@
+#!/bin/sh
+
+wolcmd 00:23:32:B4:43:92 192.168.255.255 255.255.255.0 7
+sleep 5
+wolcmd 00:23:32:B4:43:92 192.168.42.255 255.255.255.0 7
+
+#ssh bounty.local "cd /usr/local/bin; ./gointo"
+
+

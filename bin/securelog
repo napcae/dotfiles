@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#grep ssh /var/log/system.log | less
+syslog -k Time ge -24h | egrep -e 'sshd|ftpd|afp|vnc'

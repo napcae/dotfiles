@@ -1,0 +1,64 @@
+#!/bin/bash
+
+#control wifi via terminal
+
+function usage() {
+	echo "Usage: wifi on | off | info | list | connect"
+	echo "Connect: wifi connect <network> [password]"
+	echo -n "currently – "; networksetup getairportpower en0 
+}
+
+function notify() {
+	if [ "$1" = "activated" ] 
+		then
+#say "W-Lan angeschaltet"
+			terminal-notifier -message "activated" -title "Wifi" > /dev/null;
+		elif [ "$1" = "deactivated" ]
+		then
+#say "W-Lan ausgeschaltet"			
+terminal-notifier -message "deactivated" -title "Wifi" > /dev/null;
+	fi
+}
+
+function wifi_control(){
+	if [ "$1" = "on" ]
+		then
+			networksetup -setairportpower en0 on;
+
+			if [ "$?" = 0 ]
+			then
+				notify activated;
+			fi
+
+		elif [ "$1" = "off" ]
+		then	
+			networksetup -setairportpower en0 off;
+			
+			if [ "$?" = 0 ]
+			then
+				notify deactivated;
+			fi
+	
+		elif [ "$1" = "list" ] 
+		then
+			airport -s;
+		elif [ "$1" = "info" ]
+		then
+			airport -I;
+
+
+		elif [ "$1" = "connect" ]
+		then
+			echo -n "Attempting to connect to "; echo $2;
+			networksetup -setairportnetwork en0 $2 $3;
+			echo "";
+			#if [ "$?" = 1 ]
+		else
+			usage;	
+	fi
+}
+
+wifi_control $1 $2 $3;
+
+#sudoers file so modifiziert, dass der user auch networksetup benutzen konnte
+#napcae  ALL=NOPASSWD: /usr/sbin/networksetup

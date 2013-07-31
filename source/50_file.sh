@@ -40,6 +40,9 @@ function md() {
   mkdir -p "$@" && cd "$@"
 }
 
+#taking fast notes
+alias note='date >> ~/note.txt; tee -a ~/note.txt > /dev/null'
+
 # Fast directory switching
 _Z_NO_PROMPT_COMMAND=1
 _Z_DATA=~/.dotfiles/caches/.z

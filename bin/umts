@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#control wifi via terminal
+
+function usage() {
+	echo "Usage: \"umts on\" or \"umts off\""
+	echo "currently – "; networksetup getnetworkserviceenabled "Huawei Modem";
+}
+
+function notify() {
+	if [ "$1" = "activated" ] 
+		then
+			terminal-notifier -message "activated" -title "UMTS" > /dev/null;
+		elif [ "$1" = "deactivated" ]
+		then
+			terminal-notifier -message "deactivated" -title "UMTS" > /dev/null;
+	fi
+}
+
+function wifi_control(){
+	if [ "$1" = "on" ]
+		then
+			sudo networksetup -setnetworkserviceenabled "Huawei Modem" on;
+			sleep 10;
+			networksetup -connectpppoeservice "Huawei Modem"
+
+			if [ "$?" = 0 ]
+			then
+				notify activated;
+			fi
+
+		elif [ "$1" = "off" ]
+		then	
+			sudo networksetup -setnetworkserviceenabled "Huawei Modem" off;
+			
+			if [ "$?" = 0 ]
+			then
+				notify deactivated;
+			fi
+	
+		else
+		        usage	
+	fi
+}
+
+function connected(){
+	ping -c 1 www.heise.de | grep -e "100.0% packet loss" > /dev/null
+	return 1;
+}
+wifi_control $1;
+
+

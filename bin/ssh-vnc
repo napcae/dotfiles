@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ssh -p 443 -N -L 5901:localhost:5900 napcae.no-ip.org & sleep 10;open vnc://localhost:5901
+

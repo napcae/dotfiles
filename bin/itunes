@@ -1,0 +1,35 @@
+#!/bin/sh
+
+function over_vpn() {
+	echo "over_vpn"
+	dns-sd -P "iTunes_vpn" _daap._tcp local 3689 localhost.local. 127.0.0.1 "Arbitrary text record" & PID=$!
+	ssh -C -N -L 3689:localhost:3689 192.168.42.2 > /dev/null
+	kill $PID
+}
+
+function over_ssh() {
+	echo "over_ssh"
+	dns-sd -P "iTunes_ssh" _daap._tcp local 3689 localhost.local. 127.0.0.1 "Arbitrary text record" & PID=$!
+	ssh -p 443 -C -N -L 3689:localhost:3689 napcae.no-ip.org > /dev/null
+	kill $PID
+}
+
+function vpn_status() {
+	ping -c 1 192.168.42.2 | grep -e "100.0% packet loss" > /dev/null
+}
+
+#vpn_status
+#if [ $? = 0 ]
+#then#
+#	over_ssh
+#else
+#	over_vpn
+#fi
+
+over_ssh
+
+
+
+
+
+

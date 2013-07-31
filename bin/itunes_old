@@ -1,0 +1,7 @@
+#!/bin/sh
+
+dns-sd -P "iTunes" _daap._tcp local 3689 localhost.local. 127.0.0.1 "Arbitrary text record" & PID=$!
+ssh -p 443 -C -N -L 3689:localhost:3689 napcae.no-ip.org
+kill $PID
+
+

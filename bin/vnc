@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$1" = "" ]
+then
+	SleepDisplay wake;
+	open /System/Library/CoreServices/Screen\ Sharing.app/
+else
+	SleepDisplay wake;
+	open vnc://"$1"
+fi
+

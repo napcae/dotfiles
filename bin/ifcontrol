@@ -1,0 +1,104 @@
+#!/bin/bash
+
+#interface_control for mac os x 10.8
+
+
+#networksetup Help Information
+#-------------------------------
+#Usage: networksetup -listnetworkserviceorder
+#        Display services with corresponding port and device in order they are tried for connecting
+#        to a network. An asterisk (*) denotes that a service is disabled.
+
+#Usage: networksetup -listallnetworkservices
+#        Display list of services. An asterisk (*) denotes that a network service is disabled.
+#####################wifi section###############
+function usage() {
+	echo "Usage: wifi on | off | info | list | connect"
+	echo "Connect: wifi connect <network> [password]"
+	echo -n "currently – "; networksetup getairportpower en0 
+}
+
+function notify() {
+	if [ "$1" = "activated" ] 
+		then
+#say "W-Lan angeschaltet"
+			terminal-notifier -message "activated" -title "Wifi" > /dev/null;
+		elif [ "$1" = "deactivated" ]
+		then
+#say "W-Lan ausgeschaltet"			
+terminal-notifier -message "deactivated" -title "Wifi" > /dev/null;
+	fi
+}
+
+function if_switcher(){
+
+WIFI=
+UMTS=
+while getopts “w:u” OPTION
+do
+     case $OPTION in
+         w)
+             WIFI=$OPTARG
+             #exit 1
+             ;;
+         u)
+             UMTS=$OPTARG
+             ;;
+         *) echo "help?"
+            ;;     
+    esac
+done
+}
+###############################
+
+function wifi_control(){
+    echo "$1";
+    echo "$2";
+	if [ "$2" = "on" ]
+		then
+			networksetup -setairportpower en0 on;
+
+			if [ "$?" = 0 ]
+			then
+				notify activated;
+			fi
+
+		elif [ "$2" = "off" ]
+		then	
+			networksetup -setairportpower en0 off;
+			
+			if [ "$?" = 0 ]
+			then
+				notify deactivated;
+			fi
+	
+		elif [ "$2" = "list" ] 
+		then
+			airport -s;
+		elif [ "$2" = "info" ]
+		then
+			airport -I;
+
+
+		elif [ "$1" = "connect" ]
+		then
+			echo -n "Attempting to connect to "; echo $2;
+			networksetup -setairportnetwork en0 $2 $3;
+			echo "";
+			#if [ "$?" = 1 ]
+		else
+			usage;	
+	fi
+}
+
+function testing(){
+    echo "ausgewählt testing";
+   #echo "$1";
+}
+if_switcher $1;
+
+
+#wifi_control $1 $2 $3;
+
+#sudoers file so modifiziert, dass der user auch networksetup benutzen konnte
+#napcae  ALL=NOPASSWD: /usr/sbin/networksetup

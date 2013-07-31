@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function connecting() {
+ssh -L 1521:puk.hft-leipzig.de:22222 -l $matrikel seru01.hft-leipzig.de -N
+}
+
+read -p "Bitte MatrikelNummer im Format sXXXXXX eingeben: " matrikel;
+
+echo ssh -L 1521:puk.hft-leipzig.de:22222 -l $matrikel seru01.hft-leipzig.de -N;
+
+connecting;
