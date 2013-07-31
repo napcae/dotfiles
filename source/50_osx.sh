@@ -66,3 +66,32 @@ function txt_sub_restore() {
   )
   for cmd in "${cmds[@]}"; do /usr/libexec/PlistBuddy -c "$cmd" "$prefs"; done
 }
+
+
+#OS X specified aliases
+alias mou='open -a Mou '
+
+#spotlight in terminal
+alias search=mdfind
+
+#brew upgrade und update
+alias bbb='brew upgrade && brew update'
+
+#Links
+vlc=/Applications/VLC.app/Contents/MacOS/
+git=/Users/napcae/Documents/Git
+
+alias chrome='open /Applications/Google\ Chrome.app/'
+alias empty_trash='rm -rf ~/.Trash/*'
+
+#prepare for new machine
+#add src directory for software from source
+if ! [ -d /src ];
+then
+	echo "Provide sudo password for creating /src directory"
+	for i in {3..0}; do echo -n "$i "; sleep 1; done; echo 
+	sudo mkdir -v /src
+fi
+
+
+

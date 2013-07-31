@@ -10,3 +10,9 @@ function path_remove() {
   # output the new array
   echo "${t[*]}"
 }
+
+md () { mkdir -p "$1" && cd "$1"; } #go the new directory
+alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+
+#notes
+note(){date >> ~/note.txt; tee -a ~/note.txt > /dev/null}
