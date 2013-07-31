@@ -1,120 +1,43 @@
-# My awesome bash prompt
-#
-# Copyright (c) 2012 "Cowboy" Ben Alman
-# Licensed under the MIT license.
-# http://benalman.com/about/license/
-#
-# Example:
-# [master:!?][cowboy@CowBook:~/.dotfiles]
-# [11:14:45] $
-#
-# Read more (and see a screenshot) in the "Prompt" section of
-# https://github.com/cowboy/dotfiles
+#Hostcolors
 
-# ANSI CODES - SEPARATE MULTIPLE VALUES WITH ;
-#
-#  0  reset          4  underline
-#  1  bold           7  inverse
-#
-# FG  BG  COLOR     FG  BG  COLOR
-# 30  40  black     34  44  blue
-# 31  41  red       35  45  magenta
-# 32  42  green     36  46  cyan
-# 33  43  yellow    37  47  white
+lion='\[\e[0;36m\]'         #macbook air, cyan
+corny='\[\e[0;32m\]'        #pi, green
+bounty='\[\e[0;35m\]'       #macbook, purple
+duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
+default='\[\e[1;31m\]'      #orange 
 
-if [[ ! "${prompt_colors[@]}" ]]; then
-  prompt_colors=(
-    "36" # information color
-    "37" # bracket color
-    "31" # error color
-  )
+wonderbar='\[\e[0;37m\]'    #iphone  
+kitkat='\[\e[0;37m\]'       #kindle
+#list of possible future hostnames
+hostn=`hostname -s`
 
-  if [[ "$SSH_TTY" ]]; then
-    # connected via ssh
-    prompt_colors[0]="32"
-  elif [[ "$USER" == "root" ]]; then
-    # logged in as root
-    prompt_colors[0]="35"
-  fi
+case $hostn in
+lion)
+    hostncolor=$lion
+    ;;
+corny)
+    hostncolor=$corny
+    ;;
+bounty)
+    hostncolor=$bounty
+    ;;
+duplo)
+    hostncolor=$duplo
+    ;;
+*) 
+    hostncolor=$default
+    echo "color not defined"
+esac
+#debugging
+#echo $hostn
+#echo $hostncolor
+
+
+#PS1 'hostmachine:~ username$ '
+if [ $(id -u) -eq 0 ];
+then # you are root, set red colour prompt
+    PS1="\[\e[1;31m\]\h\[\e[0;38m\]:\[\e[0;32m\]\w \[\e[0;36m\]\u\[\e[0;37m\]\$ \[\033[0m\]"
+else # normal
+    PS1="$hostncolor\h\[\e[0;38m\]:\[\e[0;32m\]\w \[\e[0;36m\]\u\[\e[0;37m\]\$ \[\033[0m\]"
 fi
 
-# Inside a prompt function, run this alias to setup local $c0-$c9 color vars.
-alias prompt_getcolors='prompt_colors[9]=; local i; for i in ${!prompt_colors[@]}; do local c$i="\[\e[0;${prompt_colors[$i]}m\]"; done'
-
-# Exit code of previous command.
-function prompt_exitcode() {
-  prompt_getcolors
-  [[ $1 != 0 ]] && echo " $c2$1$c9"
-}
-
-# Git status.
-function prompt_git() {
-  prompt_getcolors
-  local status output flags
-  status="$(git status 2>/dev/null)"
-  [[ $? != 0 ]] && return;
-  output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
-  [[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
-  [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
-  flags="$(
-    echo "$status" | awk 'BEGIN {r=""} \
-      /^# Changes to be committed:$/        {r=r "+"}\
-      /^# Changes not staged for commit:$/  {r=r "!"}\
-      /^# Untracked files:$/                {r=r "?"}\
-      END {print r}'
-  )"
-  if [[ "$flags" ]]; then
-    output="$output$c1:$c0$flags"
-  fi
-  echo "$c1[$c0$output$c1]$c9"
-}
-
-# SVN info.
-function prompt_svn() {
-  prompt_getcolors
-  local info="$(svn info . 2> /dev/null)"
-  local last current
-  if [[ "$info" ]]; then
-    last="$(echo "$info" | awk '/Last Changed Rev:/ {print $4}')"
-    current="$(echo "$info" | awk '/Revision:/ {print $2}')"
-    echo "$c1[$c0$last$c1:$c0$current$c1]$c9"
-  fi
-}
-
-# Maintain a per-execution call stack.
-prompt_stack=()
-trap 'prompt_stack=("${prompt_stack[@]}" "$BASH_COMMAND")' DEBUG
-
-function prompt_command() {
-  local exit_code=$?
-  # If the first command in the stack is prompt_command, no command was run.
-  # Set exit_code to 0 and reset the stack.
-  [[ "${prompt_stack[0]}" == "prompt_command" ]] && exit_code=0
-  prompt_stack=()
-
-  # Manually load z here, after $? is checked, to keep $? from being clobbered.
-  [[ "$(type -t _z)" ]] && _z --add "$(pwd -P 2>/dev/null)" 2>/dev/null
-
-  # While the simple_prompt environment var is set, disable the awesome prompt.
-  [[ "$simple_prompt" ]] && PS1='\n$ ' && return
-
-  prompt_getcolors
-  # http://twitter.com/cowboy/status/150254030654939137
-  PS1="\n"
-  # svn: [repo:lastchanged]
-  PS1="$PS1$(prompt_svn)"
-  # git: [branch:flags]
-  PS1="$PS1$(prompt_git)"
-  # misc: [cmd#:hist#]
-  # PS1="$PS1$c1[$c0#\#$c1:$c0!\!$c1]$c9"
-  # path: [user@host:path]
-  PS1="$PS1$c1[$c0\u$c1@$c0\h$c1:$c0\w$c1]$c9"
-  PS1="$PS1\n"
-  # date: [HH:MM:SS]
-  PS1="$PS1$c1[$c0$(date +"%H$c1:$c0%M$c1:$c0%S")$c1]$c9"
-  # exit code: 127
-  PS1="$PS1$(prompt_exitcode "$exit_code")"
-  PS1="$PS1 \$ "
-}
-
-PROMPT_COMMAND="prompt_command"

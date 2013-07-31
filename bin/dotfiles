@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
+#forked from https://github.com/cowboy/dotfiles
+
+echo 'Dotfiles - "napcae" Chi Trung Nguyen - http://napcaesmind.de/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
@@ -169,7 +171,7 @@ if [[ ! -d ~/.dotfiles ]]; then
   new_dotfiles_install=1
   # ~/.dotfiles doesn't exist? Clone it!
   e_header "Downloading dotfiles"
-  git clone --recursive git://github.com/cowboy/dotfiles.git ~/.dotfiles
+  git clone --recursive git://github.com/napcae/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
 else
   # Make sure we have the latest files.
