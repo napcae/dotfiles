@@ -42,6 +42,7 @@ packages=(
   nmap telnet
   htop
   screen
+  lesspipe
 )
 
 list=()
