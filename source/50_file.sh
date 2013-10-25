@@ -43,6 +43,9 @@ function md() {
 #taking fast notes
 alias note='date >> $PWD/note.txt; tee -a $PWD/note.txt > /dev/null'
 
+#searching for text(in a source code for example) recursively
+alias srcode="grep -rH $1"
+
 # Fast directory switching
 _Z_NO_PROMPT_COMMAND=1
 _Z_DATA=~/.dotfiles/caches/.z
