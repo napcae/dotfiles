@@ -305,7 +305,8 @@ ignores = (
   },
   { level = "JOINS PARTS QUITS NICKS"; channels = ( "#macosx" ); },
   { level = "JOINS PARTS QUITS NICKS"; channels = ( "#love" ); },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "#reddit" ); }
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#reddit" ); },
+  { level = "JOINS QUITS"; }
 );
 logs = { };
 hilights = (
