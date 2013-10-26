@@ -72,7 +72,7 @@ function txt_sub_restore() {
 alias mou='open -a Mou '
 
 #spotlight in terminal
-alias search=mdfind
+alias search='mdfind '
 
 #brew upgrade und update
 alias bbb='brew upgrade && brew update'
