@@ -101,7 +101,7 @@ systemsetup -setcomputersleep Off > /dev/null
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -327,7 +327,7 @@ defaults write com.apple.dock expose-group-by-app -bool false
 #defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dock dashboard-in-overlay -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false

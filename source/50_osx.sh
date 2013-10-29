@@ -2,7 +2,7 @@
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH=/usr/local/bin:$(path_remove /usr/local/bin)
+PATH=/usr/local/Cellar/ruby/2.0.0-p247/bin:/usr/local/bin:$(path_remove /usr/local/bin)
 export PATH
 
 # Trim new lines and copy to clipboard
@@ -72,7 +72,7 @@ function txt_sub_restore() {
 alias mou='open -a Mou '
 
 #spotlight in terminal
-alias search=mdfind
+alias search='mdfind '
 
 #brew upgrade und update
 alias bbb='brew upgrade && brew update'
