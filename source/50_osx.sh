@@ -82,7 +82,7 @@ vlc=/Applications/VLC.app/Contents/MacOS/
 git=/Users/napcae/Documents/Git
 
 alias chrome='open /Applications/Google\ Chrome.app/'
-alias empty_trash='rm -rf ~/.Trash/*'
+alias et='rm -rf ~/.Trash/*'
 
 #prepare for new machine
 #add src directory for software from source
