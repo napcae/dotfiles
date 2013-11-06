@@ -51,13 +51,18 @@ These things will be installed, but _only_ if they aren't already.
 * Homebrew
   * git
   * tree
-  * sl
+  * curl
   * lesspipe
-  * id3tool
+  * irssi
+  * screen
   * nmap
   * git-extras
   * htop-osx
-  * apple-gcc42 (via [homebrew-dupes](https://github.com/Homebrew/homebrew-dupes/blob/master/apple-gcc42.rb))
+  * mobile-shell
+  * youtube-dl
+  * lynx
+  * autojump
+  * ack
 
 ### Ubuntu
 * APT
@@ -65,8 +70,6 @@ These things will be installed, but _only_ if they aren't already.
   * libssl-dev
   * git-core
   * tree
-  * sl
-  * id3tool
   * nmap
   * telnet
   * htop
