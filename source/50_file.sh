@@ -47,4 +47,6 @@ alias note='date >> $PWD/note.txt; tee -a $PWD/note.txt > /dev/null'
 _Z_NO_PROMPT_COMMAND=1
 _Z_DATA=~/.dotfiles/caches/.z
 . ~/.dotfiles/libs/z/z.sh
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+fi
