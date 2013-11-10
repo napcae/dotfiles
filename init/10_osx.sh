@@ -19,7 +19,7 @@ if [[ "$(type -P brew)" ]]; then
   brew update
 
   # Install Homebrew recipes.
-  recipes=(git tree curl wget lesspipe irssi screen nmap git-extras htop-osx mobile-shell youtube-dl lynx)
+  recipes=(git tree curl wget lesspipe irssi screen nmap git-extras htop-osx mobile-shell youtube-dl lynx autojump ack)
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
   if [[ "$list" ]]; then
