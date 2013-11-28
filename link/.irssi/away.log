@@ -9,3 +9,57 @@
 13:52 8/>> g[3/napcaeg] eidentify 18101991
 13:52 8/>> g[3/napcaeg] eidentify 18101991
 --- Log closed Mi Mai 16 13:52:51 2012
+--- Log opened Mi Nov 20 15:48:17 2013
+18:19 #digitalocean: c7/ c7/TheEternalAbyss_4/:» ehi.. what would the irc command be to killa  ghost nick?
+22:00 #digitalocean: c7/ c7/Ziber4/:» eI forget how big this channel is sometimes, since I don't have a nicklist all the time.
+22:16 #digitalocean: c7/ c7/Woet4/:» enick2474: one billion?
+22:18 #digitalocean: c7/ c7/Woet4/:» enick2474: well, you will probably want to start with getting your own IP allocation
+22:30 #digitalocean: c7/ c7/fbh4/:» enick2474: Asking that question sort of tells you to _not_ do this yourself and instead pay someone who is good at e-mail to help you :)
+22:31 #digitalocean: c7/ c7/Woet4/:» enick2474: and I've already told you twice that shared IP ranges like digital ocean are going to be very bad for your reputation
+22:33 #digitalocean: c7/ c7/Woet4/:» enick2474: sounds like you just need to use a provider like mailchimp.com
+22:34 #digitalocean: c7/ c7/Woet4/:» enick2474: as I said, if the costs are a problem then you (or your customers) are doing something wrong or illegal
+22:35 #digitalocean: c7/ c7/movedx4/:» enick2474: How many e-mails do you need to send?
+22:35 #digitalocean: c7/ c7/fbh4/:» enick2474: If they charge a lot, the e-mail you are going to send is not legitimate. If e-mail marketing is used for legitimate things, the conversion rate of the e-mails will be way enough to pay for the e-mails themselves.
+22:35 #digitalocean: c7/ c7/Woet4/:» e[22:17:32] <nick2474> i dont need one billion, but 200,000 by month is enought
+22:45 #digitalocean: c7/ c7/Woet4/:» enick2474: how do you mean?
+22:46 #digitalocean: c7/ c7/fbh4/:» enick2474: Providers like sendgrid and mandrill do not sell your e-mail lists.. they'd be looong gone by now if they did... (and not trusted by large corporations)
+22:48 #digitalocean: c7/ c7/fbh4/:» enick2474: And the problem with e.g. SendGrid is??
+22:48 #digitalocean: c7/ c7/Woet4/:» enick2474: what evidence do you have that providers like mailgun/mailchimp/sendgrid sell your subscribers?
+22:48 #digitalocean: c7/ c7/movedx4/:» eYou could just setup your own mail server to do this, nick2474. Just make sure you get the setup correct: SPF records, DKIM if you're serious, PTR records, etc.
+22:50 #digitalocean: c7/ c7/Woet4/:» enick2474: then run an outgoing e-mail server on digitalocean
+22:51 #digitalocean: c7/ c7/fbh4/:» enick2474: Bull... It has nothing to do with "confidentiality".. Huge companies like Spotify and Pinterest uses services like SendGrid for their e-mail delivery.
+23:05 #digitalocean: c7/ c7/fbh4/:» enick2474: gl
+--- Day changed Do Nov 21 2013
+01:05 #digitalocean: c7/ c7/jParkton4/:» elol cob is back as another nick with the same issue?
+03:53 #digitalocean: c7/ c7/mocx4/:» ehow is that nick not taken and protected?
+03:53 #digitalocean: c7/ c7/retran4/:» ethis chan dont require nickserv
+03:53 #digitalocean: c7/ c7/mocx4/:» ethat has nothing to do with protecting the nick
+03:55 #digitalocean: c7/ c7/retran4/:» eseems we could avoid many trolls and deceptive nicks by requiring nickserv
+03:57 #digitalocean: c7/ c7/mocx4/:» elisten, NickServ has an enforce command that protects anyone from trying to use your nick
+03:57 #digitalocean: c7/ c7/retran4/:» eand NickServ isn't a requirement to getting into freenode
+03:58 #digitalocean: c7/ c7/retran4/:» ei guess probably NickServ requiprement is too rigid
+03:59 #digitalocean: c7/ c7/mrrcp4/:» eusually the IRCD blocks specific nicks but its only *Serv nicks
+04:03 #digitalocean: c7/ c7/mocx4/:» ethat nick
+04:04 #digitalocean: c7/ c7/mocx4/:» emisspelled your nick
+04:05 #digitalocean: c7/+c7/gparent4/:» e03:04:54 < mocx> misspelled your nick
+04:10 #digitalocean: c7/+c7/gparent4/:» emaybe he panicked
+--- Log closed Do Nov 21 14:24:27 2013
+--- Log opened Do Nov 21 16:06:51 2013
+16:16 #digitalocean: 4/** Netwolf really loves how cool having Client SSL based authentication to freenode is. So much nicer than an stupid msg >/nickgserv identify
+16:20 #digitalocean: c7/+c7/gparent4/:» eit's mostly nice because you can switch nick without issues
+20:45 #digitalocean: c7/ c7/git4/:» eand they use the nick "git"
+20:46 #digitalocean: c7/ c7/git4/:» eso i'm going to be a passive-aggressive dick and use the nick for myself!
+--- Day changed Fr Nov 22 2013
+10:08 #digitalocean: c7/ c7/dima12364/:» esorry wrong nick
+15:02 #digitalocean: c7/ c7/fbh4/:» eHe will be back in 5 mins with another nick asking about how to do the same thing on a droplet :p
+18:29 #digitalocean: c7/ c7/Woet4/:» ei won't stop until you change your nick
+20:37 #digitalocean: c7/@c7/bodie_4/:» esup Nick_____
+20:38 #digitalocean: c7/ c7/kyhwana4/:» e?ask | Nick_____
+20:38 #digitalocean: c7/+c7/SammyTheShark4/:» eNick_____: Please don't ask to ask. State your question and somebody may be able to help you. If no one answers and the question is related to DigitalOcean's services, please submit a ticket at https://www.digitalocean.com/support (login required).
+20:38 #digitalocean: c7/@c7/bodie_4/:» eNick_____ please state your question and an invisible entity will assist you
+20:39 #digitalocean: c7/+c7/gparent4/:» eNick_____: as easy as it would be on a real computer or in a virtual machine at home
+20:39 #digitalocean: c7/@c7/bodie_4/:» eNick_____ if you can do it in a virtual machine on your own PC, or on a real PC with linux installed, you can do it on our service
+20:40 #digitalocean: c7/+c7/gparent4/:» eNick_____: there's a lamp image but if you use it without having any clue what you're doing you're in for pain
+20:41 #digitalocean: c7/ c7/aerokid2404/:» eNick___: tasksel and look for LAMP
+20:41 #digitalocean: c7/@c7/bodie_4/:» eNick_____ there's a LAMP and a LEMP beta image we offer
+--- Log closed Sa Nov 23 16:57:03 2013
