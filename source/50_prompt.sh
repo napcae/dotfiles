@@ -4,6 +4,7 @@ lion='\[\e[0;36m\]'         #macbook air, cyan
 corny='\[\e[0;32m\]'        #pi, green
 bounty='\[\e[0;35m\]'       #macbook, purple
 duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
+butterfinger='\[\e[1;37m\]' #butterfinger, white
 default='\[\e[1;31m\]'      #orange 
 
 wonderbar='\[\e[0;37m\]'    #iphone  
@@ -23,6 +24,15 @@ bounty)
     ;;
 duplo)
     hostncolor=$duplo
+    ;;
+butterfinger)
+    hostncolor=$butterfinger
+    ;;
+wonderbar)
+    hostncolor=$wonderbar
+    ;;
+kitkat)
+    hostncolor=$kitkat
     ;;
 *) 
     hostncolor=$default
