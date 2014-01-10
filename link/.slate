@@ -52,6 +52,7 @@ bind ,:cmd;alt chain ${topleft} | ${topright} | ${bottomleft} | ${bottomright}
 #bind k:cmd;shift focus 'iTunes'
 #bind o:cmd;shift focus 'Reeder'
 #bind l:cmd;shift focus 'Screen Saver'
+bind m:cmd;shift focus 'Sublime Text 2'
 
 #Layout
 layout WebDev 'Google Chrome' push left bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX/2
