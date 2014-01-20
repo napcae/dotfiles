@@ -4,6 +4,7 @@ lion='\[\e[0;36m\]'         #macbook air, cyan
 corny='\[\e[0;32m\]'        #pi, green
 bounty='\[\e[0;35m\]'       #macbook, purple
 duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
+butterfinger='\[\e[1;37m\]' #butterfinger, white
 default='\[\e[1;31m\]'      #orange 
 
 wonderbar='\[\e[0;37m\]'    #iphone  
@@ -24,6 +25,15 @@ bounty)
 duplo)
     hostncolor=$duplo
     ;;
+butterfinger)
+    hostncolor=$butterfinger
+    ;;
+wonderbar)
+    hostncolor=$wonderbar
+    ;;
+kitkat)
+    hostncolor=$kitkat
+    ;;
 *) 
     hostncolor=$default
     echo "color not defined"
@@ -43,5 +53,6 @@ fi
 
 ##http://www.bergspot.com/blog/2012/02/how-to-fix-warning-setlocale-lc_ctype-cannot-change-locale-utf-8/
 ##manual locale set
+export LANG="de_DE.UTF-8"
 export LC_CTYPE="de_DE.UTF-8"
-
+export LC_ALL="de_DE.UTF-8"
