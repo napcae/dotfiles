@@ -104,13 +104,6 @@ In addition to the aforementioned [dotfiles][dotfiles] script, there are a few o
 * [src](https://github.com/cowboy/dotfiles/blob/master/link/.bashrc#L6-15) - (re)source all files in `source` directory
 * Look through the [bin][bin] subdirectory for a few more.
 
-## Prompt
-
-
-## Inspiration
-<https://github.com/gf3/dotfiles>  
-<https://github.com/mathiasbynens/dotfiles>  
-(and 15+ years of accumulated crap)
 
 ## License
 Copyright (c) 2012 "Cowboy" Ben Alman  
