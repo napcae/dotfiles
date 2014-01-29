@@ -86,17 +86,6 @@ chatnets = {
     max_msgs = "3";
     max_whois = "30";
   };
-  SILC = { type = "SILC"; };
-  freenode = {
-    type = "IRC";
-    nick = "napcae";
-    autosendcmd = "/msg NickServ identify 18101991";
-  };
-  alpha = {
-    type = "IRC";
-    nick = "hjkl";
-    autosendcmd = "/msg cerberus enter 18101991;wait 2000";
-  };
   ccc = { type = "IRC"; };
   alphaomega = { type = "IRC"; };
   AO = { type = "IRC"; };
@@ -108,8 +97,6 @@ chatnets = {
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#AlphaOmega"; chatnet = "AO"; autojoin = "yes"; },
   { name = "#ccc"; chatnet = "ccc"; autojoin = "yes"; },
   { name = "#love"; chatnet = "ilt"; autojoin = "yes"; }
 );
@@ -311,6 +298,5 @@ ignores = (
 logs = { };
 hilights = (
   { text = "nick"; nick = "yes"; word = "yes"; },
-  { text = "hjkl"; nick = "yes"; word = "yes"; },
   { text = "napcae"; nick = "yes"; word = "yes"; }
 );
