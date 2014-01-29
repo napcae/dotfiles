@@ -91,6 +91,8 @@ chatnets = {
   AO = { type = "IRC"; };
   IRCnet = { type = "IRC"; };
   ilt = { type = "IRC"; nick = "hjkl"; };
+  freenode = { type = "IRC"; };
+  alpha = { type = "IRC"; };
 };
 
 
