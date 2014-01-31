@@ -7,100 +7,25 @@ servers = (
     ssl_verify = "no";
   },
   {
-    address = "irc.alphaomega.me";
-    chatnet = "alpha";
-    port = "7000";
-    use_ssl = "yes";
-    ssl_verify = "no";
-  },
-  {
     address = "ray.blafasel.de";
     chatnet = "ccc";
     port = "0";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "no";
-  },
-  {
-    address = "irc.ilovetorrents.me";
-    chatnet = "ilt";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
-    family = "inet";
   }
 );
 
-chatnets = {
-  EFNet = { 
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  OFTC = { 
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  GameSurge = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  WebChat = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  Rizon = { 
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  LinkNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  ccc = { type = "IRC"; };
-  alphaomega = { type = "IRC"; };
-  AO = { type = "IRC"; };
-  IRCnet = { type = "IRC"; };
-  ilt = { type = "IRC"; nick = "hjkl"; };
-  freenode = { type = "IRC"; };
-  alpha = { type = "IRC"; };
-};
+chatnets = { ccc = { type = "IRC"; }; freenode = { type = "IRC"; }; };
 
 
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "#ccc"; chatnet = "ccc"; autojoin = "yes"; },
-  { name = "#love"; chatnet = "ilt"; autojoin = "yes"; }
+  { name = "#love"; chatnet = "ilt"; autojoin = "yes"; },
+  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#macosx"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -298,7 +223,4 @@ ignores = (
   { level = "JOINS QUITS"; }
 );
 logs = { };
-hilights = (
-  { text = "nick"; nick = "yes"; word = "yes"; },
-  { text = "napcae"; nick = "yes"; word = "yes"; }
-);
+hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );

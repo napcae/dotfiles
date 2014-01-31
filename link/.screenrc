@@ -4,7 +4,15 @@
 # If begins with a '-' character, the shell will be started as a login shell.
   shell -$SHELL
 
-caption always '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+#weather updates every 30 minutes(1800 seconds)
+backtick 1 1800 1800 $HOME/git/gnu-screen-weather/gnu-screen-weather.sh -m
+backtick 2 1800 1800 $HOME/git/gnu-screen-weather/gnu-screen-weather.sh -i
+backtick 3 1800 1800 $HOME/git/gnu-screen-weather/gnu-screen-weather.sh -c
+
+
+caption always '%{= dg} %H %{G}| %{B}%l %{G}| max:%1` min:%2` now:%3` partly-cloudy | %=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+#caption always '%{= dg} %H %{G}| %{B}%l %{G}| +1° -1° 10° | %=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+
 
 
 bindkey "^[k" eval "copy" "stuff ^b"  # enter copy mode and move up one page
