@@ -1,30 +1,30 @@
 #################################################################
-# aka theme (v1.00)						#
-# by curson [navaeg@gmail.com] - http://www.the-shrike.net	#
+# aka theme (v1.00)           #
+# by curson [navaeg@gmail.com] - http://www.the-shrike.net  #
 #################################################################
 
 #################################################################
 # This is the first version of this theme I finally decided to  #
 # release to the "public". The original base of the theme is    #
 # strongly inspired by lilah.theme, but I'm not sure how much   #
-# of it is actually left here.					#
+# of it is actually left here.          #
 # Apart from the annoying (but known) /me hilight bug it should #
-# be working fine.						#
-# [FS#107 bug on http://bugs.irssi.org]				#
-#								#
-# Any feedback would be highly appreciated ;)			#
+# be working fine.            #
+# [FS#107 bug on http://bugs.irssi.org]       #
+#               #
+# Any feedback would be highly appreciated ;)     #
 #################################################################
 
 #################################################################
-# NOTES:							#
+# NOTES:              #
 # When testing changes, the easiest way to reload the theme is  #
 # with /RELOAD. This reloads the configuration file too, so if  #
 # you did any changes remember to /SAVE it first. Remember also #
 # that /SAVE overwrites the theme file with old data so keep    #
-# backups :)							#
-#								#
-# You can find definitions for the color format codes in 	#
-# docs/formats.txt.						#
+# backups :)              #
+#               #
+# You can find definitions for the color format codes in  #
+# docs/formats.txt.           #
 #################################################################
 
 # these characters are automatically replaced with specified color
@@ -112,16 +112,16 @@ abstracts = {
   #  privmsgnick = "%K{msgnick  %r$0-%K}%n";
 
   # $0 = nick mode, $1 = nick
-  ownmsgnick = "{msgnick %_$0%_ $1-:»}%w";
+  ownmsgnick = "{msgnick %_$0%_ $1-: }%w";
   #ownmsgnick = "{msgnick %_$0 $1-:}";
   ownnick = "%r$0-%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
-  pubmsgnick = "{msgnick %_$0%_ %w$1-%r:»%n}";
+  pubmsgnick = "{msgnick %_$0%_ %w$1-%r: %n}";
   pubnick = "$0-%w";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "{msgnick %_$0%_ %w$1-%r:»}%n";
+  pubmsgmenick = "{msgnick %_$0%_ %w$1-%r: }%n";
   menick = "%r$0-%n";
 
   # In irssi, set these in order to get hilights in red:
@@ -135,23 +135,23 @@ abstracts = {
   # 
   # This controls only the nick part of the hilighted msg, the rest is set by /hilight_* in irssi.
   # Now we have a white nick (normal) with the rest of the line hilighted red.
-  pubmsghinick = "{msgnick %w$1 %w$2-%w%r:»}%r";
+  pubmsghinick = "{msgnick %w$1 %w$2-%w%r: }%r";
 
   # channel name is printed with message
   msgchannel = "%r~%c$0-%n";
 
   # private message, $0 = nick, $1 = host
-  privmsg = "%w$0%w(%y$1-%K)%r:»%n ";
+  privmsg = "%w$0%w(%y$1-%K)%r: %n ";
 
   # private message from you, $0 = "msg", $1 = target nick
-  ownprivmsg = "%r$0%w(%w$1-%c)%r:»%w ";
+  ownprivmsg = "%r$0%w(%w$1-%c)%r: %w ";
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $0-}";
   ownprivnick = "%r$0-%r:>%w";
 
   # private message in query
-  privmsgnick = "{msgnick  %w$0-%r:»%n}";
+  privmsgnick = "{msgnick  %w$0-%r: %n}";
 
   ##
   ## Actions (/ME stuff)
@@ -263,7 +263,7 @@ abstracts = {
   # used for anything.                                         
   sbend = " ";
 
-  prompt = "%W$*%r :» ";
+  prompt = "%W$*%r :  ";
 
   topicsbstart = "%R[%n{sbstart $*}";
   topicsbend = "{sbend $*} %R]";
@@ -288,8 +288,8 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-    pubmsg = "{pubmsgnick $2 {pubnick \00311$0}}$1";
-    join = "%r»%w» %r$0 %w»%r»%n {chanhost $1} %wjoins %r$2";
+    pubmsg = "{pubmsgnick $2 {pubnick $0}}$1";
+    join = "%r %w  %r$0 %w %r %n {chanhost $1} %wjoins %r$2";
     part = "%w« %r$0 %w«%n {chanhost $1} %wleaves %r$2 %r[%w$3%r]";
     quit = "%r«%w« %r$0 %w«%r«%n {chanhost $1} %wquits %r[%w$2%r]";
     kick = "%w«%r«%R!%r«%w« %r$0%n has been kicked from {channel $1} by {nick $2} %r[%w$3%r]";
