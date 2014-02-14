@@ -24,8 +24,23 @@ alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2         
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
+##iOS Resolutions http://www.iosres.com/
+alias iPhone move 0;0 320;480+72
+alias iPhoneRetina move 0;0 640;960+72
+alias iPhone5 move 0;0 640;1136+72
+alias iPad move 0;0 768;1024+72
+alias iPadRetina move 0;0 1536;2048+72
+
+#Landscape modes
+alias iPhoneL move 0;0 480;320+72
+alias iPhoneRetinaL move 0;0 960;640+72
+alias iPhone5L move 0;0 1136;640+72
+alias iPadL move 0;0 1024;768+72
+alias iPadRetinaL move 0;0 2048;1536+72
+
+
 #Grid
-bind 1:ctrl grid padding:5 1366x768:16,9 768x1366:9,16
+#bind 1:ctrl;alt grid padding:5 1366x768:16,9 768x1366:9,16
 
 ### Bindings ###
 # Window Behaviour
@@ -44,6 +59,17 @@ bind l:shift;alt;cmd ${rightthird}
 bind .:cmd;alt ${bottomright}
 #bind p:cmd;alt ${topright}
 
+bind 1:ctrl ${iPhone}
+bind 2:ctrl ${iPhoneRetina}
+bind 3:ctrl ${iPhone5}
+bind 4:ctrl ${iPad}
+bind 5:ctrl ${iPadRetina}
+bind 1:ctrl;alt ${iPhoneL}
+bind 2:ctrl;alt ${iPhoneRetinaL}
+bind 3:ctrl;alt ${iPhone5L}
+bind 4:ctrl;alt ${iPadL}
+bind 5:ctrl;alt ${iPadRetinaL}
+
 bind ,:cmd;alt chain ${topleft} | ${topright} | ${bottomleft} | ${bottomright}
 
 # Application Select
@@ -53,6 +79,7 @@ bind ,:cmd;alt chain ${topleft} | ${topright} | ${bottomleft} | ${bottomright}
 #bind o:cmd;shift focus 'Reeder'
 #bind l:cmd;shift focus 'Screen Saver'
 bind m:cmd;shift focus 'Sublime Text 2'
+bind n:shift;ctrl;cmd chain focus 'nvALT' | toggle 'nvALT'
 
 #Layout
 layout WebDev 'Google Chrome' push left bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX/2
