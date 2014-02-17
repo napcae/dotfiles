@@ -205,22 +205,12 @@ settings = {
   };
 };
 ignores = (
-  { level = "JOINS QUITS NICKS"; channels = ( "#irssihelp" ); },
-  { level = "JOINS QUITS NICKS"; channels = ( "#28c3" ); },
-  { mask = "irc.hackint.eu"; level = "JOINS QUITS NICKS"; },
-  { mask = "irc.freenode.net"; level = "JOINS QUITS NICKS"; },
+  { level = "JOINS PARTS QUITS NICKS"; },
   {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#28c3", "#pentanews" );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#28c3", "#pentanews", "#28c3-Saal-1" );
-  },
-  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#macosx" ); },
-  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#love" ); },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "#reddit" ); },
-  { level = "JOINS QUITS"; }
+    level = "ACTIONS";
+    pattern = "(away|gone|back|playin|weg|wech|returned)";
+    regexp = "yes";
+  }
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
