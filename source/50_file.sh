@@ -20,6 +20,9 @@ else
   alias lsd='CLICOLOR_FORCE=1 ll | grep --color=never "^d"'
 fi
 
+#less with line numbers
+alias less="less -N"
+
 # Easier navigation: .., ..., -
 alias ..='cd ..'
 alias ...='cd ../..'
