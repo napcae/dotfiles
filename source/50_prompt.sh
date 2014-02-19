@@ -2,10 +2,10 @@
 # Sexy bash prompt by twolfson
 # https://github.com/twolfson/sexy-bash-prompt
 # Forked from gf3, https://gist.github.com/gf3/306785
-
 if [[ \$COLORTERM = gnome-* && \$TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
-elif [[ \$TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
+    elif [[ \$TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
 fi
+
 # If we are on a colored terminal
 if tput setaf 1 &> /dev/null; then
   # Reset the shell from our `if` check
@@ -20,10 +20,19 @@ if tput setaf 1 &> /dev/null; then
   # Save common color actions
   prompt_bold="$(tput bold)"
   prompt_reset="$(tput sgr0)"
+    
+#PS1 'hostmachine:~ username$ '
+if [ $(id -u) -eq 0 ];
+then # you are root, set red colour prompt
+    prompt_u_c="$prompt_bold$(tput setaf 1)"    
+else # normal
+    prompt_u_c="$prompt_bold$(tput setaf 27)"
+fi
+
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ $(tput colors) -ge 256 ]] &> /dev/null; then
-    prompt_user_color="$prompt_bold$(tput setaf 27)" # BOLD BLUE
+    prompt_user_color="$prompt_u_c" # BOLD BLUE
     prompt_preposition_color="$prompt_bold$(tput setaf 7)" # BOLD WHITE
     prompt_device_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
     prompt_dir_color="$prompt_bold$(tput setaf 76)" # BOLD GREEN
