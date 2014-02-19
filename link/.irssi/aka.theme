@@ -288,11 +288,11 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
-<<<<<<< HEAD
+
     pubmsg = "{pubmsgnick $2 {pubnick \00304$0}}$1";
-=======
-    pubmsg = "{pubmsgnick $2 {pubnick \00311$0}}$1";
->>>>>>> cfcaaef080a3c9fac90b7ac6cd0ea02b17a62c45
+
+    #pubmsg = "{pubmsgnick $2 {pubnick \00311$0}}$1";
+
     join = "%r %w  %r$0 %w %r %n {chanhost $1} %wjoins %r$2";
     part = "%w« %r$0 %w«%n {chanhost $1} %wleaves %r$2 %r[%w$3%r]";
     quit = "%r«%w« %r$0 %w«%r«%n {chanhost $1} %wquits %r[%w$2%r]";

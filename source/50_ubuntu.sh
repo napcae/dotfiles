@@ -10,6 +10,7 @@ alias search="apt-cache search"
 # Make 'less' more.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+alias iptables="iptables --line-numbers"
 # Switch between already-downloaded node versions.
 #function node_ver() {
 #  (
