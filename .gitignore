@@ -6,4 +6,4 @@ link/.ssh/known_hosts
 link/.ssh/git*
 *LOCAL*
 .gnupg
-link/.gnupg/
+link/.gnupg/*
