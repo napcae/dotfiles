@@ -101,6 +101,10 @@ else
   prompt_symbol_color="" # NORMAL
 fi
 
+# set red name if root
+if [[ $UID == 0 ]]; then
+    PROMPT_USER_COLOR="$(tput bold)$(tput setaf 9)"
+fi
 # Apply any color overrides that have been set in the environment
 if [[ -n "$PROMPT_USER_COLOR" ]]; then prompt_user_color="$PROMPT_USER_COLOR"; fi
 if [[ -n "$PROMPT_PREPOSITION_COLOR" ]]; then prompt_preposition_color="$PROMPT_PREPOSITION_COLOR"; fi
@@ -244,7 +248,6 @@ get_git_info () {
 function get_prompt_symbol() {
   # If we are root, display `#`. Otherwise, `$`
   if [[ $UID == 0 ]]; then
-    PROMPT_USER_COLOR="$(tput bold)$(tput setaf 9)"
     echo "#"
   else
     echo "\$"
