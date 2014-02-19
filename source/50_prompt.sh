@@ -1,46 +1,16 @@
 # Hostcolors
-lion='\[\e[0;36m\]'         #macbook air, cyan
-corny='\[\e[0;32m\]'        #pi, green
-bounty='\[\e[0;35m\]'       #macbook, purple
-duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
-butterfinger='\[\e[1;37m\]' #butterfinger, white
-milkyway=$MAGENTA           #milkyway
-default='\[\e[1;31m\]'      #orange 
+# computers
+bounty=$(tput setaf 100)        #macbook, ocker  
+lion=$(tput setaf 57)           #macbook air, purple
+butterfinger=$(tput setaf 15)   #macbook retina, white
+corny=$(tput setaf 28)          #raspberry, green
 
-wonderbar='\[\e[0;37m\]'    #iphone  
-kitkat='\[\e[0;37m\]'       #kindle
-#list of possible future hostnames
+# server
+milkyway=$(tput setaf 123)      #ams1, whiteblue
+duplo=$(tput setaf 3)           #ams1, yellow
+
 hostn=`hostname -s`
 
-case $hostn in
-lion)
-    hostncolor=$lion
-    ;;
-corny)
-    hostncolor=$corny
-    ;;
-bounty)
-    hostncolor=$bounty
-    ;;
-duplo)
-    hostncolor=$duplo
-    ;;
-butterfinger)
-    hostncolor=$butterfinger
-    ;;
-wonderbar)
-    hostncolor=$wonderbar
-    ;;
-kitkat)
-    hostncolor=$kitkat
-    ;;
-milkyway)
-    hostncolor=$milkyway
-    ;;
-*) 
-    hostncolor=$default
-    echo "color not defined"
-esac
 #debugging
 #echo $hostn
 #echo $hostncolor
@@ -101,10 +71,41 @@ else
   prompt_symbol_color="" # NORMAL
 fi
 
-# set red name if root
+case $hostn in
+lion)
+    PROMPT_DEVICE_COLOR=$lion
+    ;;
+corny)
+    PROMPT_DEVICE_COLOR=$corny
+    ;;
+bounty)
+    PROMPT_DEVICE_COLOR=$bounty
+    ;;
+duplo)
+    PROMPT_DEVICE_COLOR=$duplo
+    ;;
+butterfinger)
+    PROMPT_DEVICE_COLOR=$butterfinger
+    ;;
+wonderbar)
+    PROMPT_DEVICE_COLOR=$wonderbar
+    ;;
+kitkat)
+    PROMPT_DEVICE_COLOR=$kitkat
+    ;;
+milkyway)
+    PROMPT_DEVICE_COLOR=$milkyway
+    ;;
+*) 
+    PROMPT_DEVICE_COLOR=$default
+    echo "color not defined"
+esac
+
+# Set red prompt if root
 if [[ $UID == 0 ]]; then
-    PROMPT_USER_COLOR="$(tput bold)$(tput setaf 9)"
+  PROMPT_USER_COLOR=$(tput bold)$(tput setaf 9)
 fi
+
 # Apply any color overrides that have been set in the environment
 if [[ -n "$PROMPT_USER_COLOR" ]]; then prompt_user_color="$PROMPT_USER_COLOR"; fi
 if [[ -n "$PROMPT_PREPOSITION_COLOR" ]]; then prompt_preposition_color="$PROMPT_PREPOSITION_COLOR"; fi
@@ -253,7 +254,7 @@ function get_prompt_symbol() {
     echo "\$"
   fi
 }
-get_prompt_symbol
+
 # Define the sexy-bash-prompt
 PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
 \[$prompt_preposition_color\]at\[$prompt_reset\] \
