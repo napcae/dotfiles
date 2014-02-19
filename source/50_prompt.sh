@@ -1,10 +1,54 @@
+# Hostcolors
+lion='\[\e[0;36m\]'         #macbook air, cyan
+corny='\[\e[0;32m\]'        #pi, green
+bounty='\[\e[0;35m\]'       #macbook, purple
+duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
+butterfinger='\[\e[1;37m\]' #butterfinger, white
+milkyway=$MAGENTA           #milkyway
+default='\[\e[1;31m\]'      #orange 
+
+wonderbar='\[\e[0;37m\]'    #iphone  
+kitkat='\[\e[0;37m\]'       #kindle
+#list of possible future hostnames
+hostn=`hostname -s`
+
+case $hostn in
+lion)
+    hostncolor=$lion
+    ;;
+corny)
+    hostncolor=$corny
+    ;;
+bounty)
+    hostncolor=$bounty
+    ;;
+duplo)
+    hostncolor=$duplo
+    ;;
+butterfinger)
+    hostncolor=$butterfinger
+    ;;
+wonderbar)
+    hostncolor=$wonderbar
+    ;;
+kitkat)
+    hostncolor=$kitkat
+    ;;
+milkyway)
+    hostncolor=$milkyway
+    ;;
+*) 
+    hostncolor=$default
+    echo "color not defined"
+esac
+#debugging
+#echo $hostn
+#echo $hostncolor
+
 #!/usr/bin/env bash
 # Sexy bash prompt by twolfson
 # https://github.com/twolfson/sexy-bash-prompt
 # Forked from gf3, https://gist.github.com/gf3/306785
-if [[ \$COLORTERM = gnome-* && \$TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
-    elif [[ \$TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
-fi
 
 # If we are on a colored terminal
 if tput setaf 1 &> /dev/null; then
@@ -20,19 +64,10 @@ if tput setaf 1 &> /dev/null; then
   # Save common color actions
   prompt_bold="$(tput bold)"
   prompt_reset="$(tput sgr0)"
-    
-#PS1 'hostmachine:~ username$ '
-if [ $(id -u) -eq 0 ];
-then # you are root, set red colour prompt
-    prompt_u_c="$prompt_bold$(tput setaf 1)"    
-else # normal
-    prompt_u_c="$prompt_bold$(tput setaf 27)"
-fi
-
 
   # If the terminal supports at least 256 colors, write out our 256 color based set
   if [[ $(tput colors) -ge 256 ]] &> /dev/null; then
-    prompt_user_color="$prompt_u_c" # BOLD BLUE
+    prompt_user_color="$prompt_bold$(tput setaf 27)" # BOLD BLUE
     prompt_preposition_color="$prompt_bold$(tput setaf 7)" # BOLD WHITE
     prompt_device_color="$prompt_bold$(tput setaf 39)" # BOLD CYAN
     prompt_dir_color="$prompt_bold$(tput setaf 76)" # BOLD GREEN
@@ -209,12 +244,13 @@ get_git_info () {
 function get_prompt_symbol() {
   # If we are root, display `#`. Otherwise, `$`
   if [[ $UID == 0 ]]; then
+    PROMPT_USER_COLOR="$(tput bold)$(tput setaf 9)"
     echo "#"
   else
     echo "\$"
   fi
 }
-
+get_prompt_symbol
 # Define the sexy-bash-prompt
 PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
 \[$prompt_preposition_color\]at\[$prompt_reset\] \
@@ -226,55 +262,6 @@ PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
   echo -n \"\[$prompt_git_status_color\]\$(get_git_info)\" && \
   echo -n \"\[$prompt_preposition_color\]\")\n\[$prompt_reset\]\
 \[$prompt_symbol_color\]$(get_prompt_symbol) \[$prompt_reset\]"
-
-#Hostcolors
-
-lion='\[\e[0;36m\]'         #macbook air, cyan
-corny='\[\e[0;32m\]'        #pi, green
-bounty='\[\e[0;35m\]'       #macbook, purple
-duplo='\[\e[0;33m\]'        #ams1 digital ocean server, yellow
-butterfinger='\[\e[1;37m\]' #butterfinger, white
-milkyway=$MAGENTA           #milkyway
-default='\[\e[1;31m\]'      #orange 
-
-wonderbar='\[\e[0;37m\]'    #iphone  
-kitkat='\[\e[0;37m\]'       #kindle
-#list of possible future hostnames
-hostn=`hostname -s`
-
-case $hostn in
-lion)
-    hostncolor=$lion
-    ;;
-corny)
-    hostncolor=$corny
-    ;;
-bounty)
-    hostncolor=$bounty
-    ;;
-duplo)
-    hostncolor=$duplo
-    ;;
-butterfinger)
-    hostncolor=$butterfinger
-    ;;
-wonderbar)
-    hostncolor=$wonderbar
-    ;;
-kitkat)
-    hostncolor=$kitkat
-    ;;
-milkyway)
-    hostncolor=$milkyway
-    ;;
-*) 
-    hostncolor=$default
-    echo "color not defined"
-esac
-#debugging
-#echo $hostn
-#echo $hostncolor
-
 #PS1 'hostmachine:~ username$ '
 #if [ $(id -u) -eq 0 ];
 #then # you are root, set red colour prompt
