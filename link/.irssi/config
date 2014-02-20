@@ -77,6 +77,7 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  stoprecon = "RMRECONNS";
 };
 
 statusbar = {
