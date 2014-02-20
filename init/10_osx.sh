@@ -41,6 +41,24 @@ if [[ "$(type -P brew)" ]]; then
     brew install $list
   fi
 
+  # install brew cask if not installed yet
+  if [[ ! "$(brew cask)" ]]; then
+    brew install brew-cask
+    brew tap phinze/cask
+  fi
+
+
+  cask_recipes=(google-chrome\
+
+  )
+
+  cask_list="$(to_install "${cask_recipes[*]}" "$(brew list)")"
+  if [[ "$cask_list" ]]; then
+    e_header "Installing Homebrew Cask recipes: $cask_list"
+    brew cask install $cask_list
+  fi
+  
+
   if [[ ! "$(type -P gcc-4.2)" ]]; then
     e_header "Installing Homebrew dupe recipe: apple-gcc42"
     brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb
