@@ -16,6 +16,7 @@ fi
 
 # install brew cask if not installed yet
 if [[ ! "$(brew cask)" ]]; then
+  e_header "Installing Brew Cask"
   brew install brew-cask
   brew tap phinze/cask
 fi
