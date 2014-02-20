@@ -14,6 +14,12 @@ if [[ ! "$(type -P brew)" ]]; then
   true | /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
 fi
 
+# install brew cask if not installed yet
+if [[ ! "$(brew cask)" ]]; then
+  brew install brew-cask
+  brew tap phinze/cask
+fi
+
 if [[ "$(type -P brew)" ]]; then
   e_header "Updating Homebrew"
   brew update
@@ -40,13 +46,6 @@ if [[ "$(type -P brew)" ]]; then
     e_header "Installing Homebrew recipes: $list"
     brew install $list
   fi
-
-  # install brew cask if not installed yet
-  if [[ ! "$(brew cask)" ]]; then
-    brew install brew-cask
-    brew tap phinze/cask
-  fi
-
 
   cask_recipes=(google-chrome\
 
