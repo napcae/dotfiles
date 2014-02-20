@@ -1,6 +1,8 @@
 # OSX-only stuff. Abort if not OSX.
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
+# screen with x256 => https://gist.github.com/shawnbot/3277580
+PATH="/usr/local/bin:$PATH"
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
 PATH=/usr/local/Cellar/ruby/2.0.0-p247/bin:/usr/local/bin:$(path_remove /usr/local/bin)
 export PATH
