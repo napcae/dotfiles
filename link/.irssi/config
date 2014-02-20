@@ -23,9 +23,10 @@ chatnets = { ccc = { type = "IRC"; }; freenode = { type = "IRC"; }; };
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "#ccc"; chatnet = "ccc"; autojoin = "yes"; },
-  { name = "#love"; chatnet = "ilt"; autojoin = "yes"; },
-  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#macosx"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
