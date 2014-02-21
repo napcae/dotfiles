@@ -78,6 +78,7 @@ aliases = {
   UNSET = "set -clear";
   RESET = "set -default";
   stoprecon = "RMRECONNS";
+  l = "mark";
 };
 
 statusbar = {
