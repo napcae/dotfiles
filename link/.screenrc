@@ -20,7 +20,7 @@ defbce "on"
 #backtick 3 1800 1800 $HOME/git/gnu-screen-weather/gnu-screen-weather.sh -c
 
 
-caption always '%{= dg} %H %{G}| %{B}%l %{G}| max:%1` min:%2` now:%3` partly-cloudy | %=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
+caption always '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
 #caption always '%{= dg} %H %{G}| %{B}%l %{G}| +1° -1° 10° | %=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s '
 
 
