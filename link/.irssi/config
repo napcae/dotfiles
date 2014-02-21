@@ -194,7 +194,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "";
+    real_name = "Chi Trung Nguyen (http://ctnguyen.net)";
     user_name = "napcae";
     nick = "napcae";
     hostname = "";
