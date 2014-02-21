@@ -265,3 +265,7 @@ mainwindows = {
   1 = { first_line = "8"; lines = "39"; };
   6 = { first_line = "1"; lines = "7"; };
 };
+keyboard = (
+  { key = "^C"; id = "erase_line"; data = ""; },
+  { key = "^L"; id = "command"; data = "mark "; }
+);
