@@ -32,3 +32,6 @@ alias iptables="iptables --line-numbers"
 #    echo "Error, $(node --version) installed."
 #  )
 #}
+
+# source autojump
+.  /usr/share/autojump/autojump.sh

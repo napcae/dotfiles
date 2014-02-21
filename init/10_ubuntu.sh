@@ -39,10 +39,13 @@ sudo apt-get -qq upgrade
 packages=(
   git-core
   tree
-  nmap telnet
+  nmap 
+  telnet
   htop
   screen
   lesspipe
+  autojump
+  irssi
 )
 
 list=()
