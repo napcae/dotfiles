@@ -194,7 +194,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Chi Trung Nguyen";
+    real_name = "";
     user_name = "napcae";
     nick = "napcae";
     hostname = "";
@@ -217,3 +217,51 @@ ignores = (
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#digitalocean";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#anapnea";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#git";
+        tag = "freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#mosh";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = { name = "hilight"; sticky = "yes"; };
+};
+mainwindows = {
+  1 = { first_line = "8"; lines = "39"; };
+  6 = { first_line = "1"; lines = "7"; };
+};
