@@ -194,7 +194,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Trung Nguyen Chi";
+    real_name = "Chi Trung Nguyen";
     user_name = "napcae";
     nick = "napcae";
     hostname = "";
