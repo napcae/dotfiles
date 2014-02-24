@@ -144,6 +144,7 @@ statusbar = {
         act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
+        usercount = { };
       };
     };
 
@@ -254,9 +255,8 @@ windows = {
       }
     );
   };
-  5 = { };
-  6 = { name = "hilight"; sticky = "yes"; };
-  7 = {
+  5 = { name = "hilight"; sticky = "yes"; };
+  6 = {
     items = (
       {
         type = "CHANNEL";
@@ -266,7 +266,7 @@ windows = {
       }
     );
   };
-  8 = {
+  7 = {
     items = (
       {
         type = "CHANNEL";
@@ -276,7 +276,7 @@ windows = {
       }
     );
   };
-  9 = {
+  8 = {
     items = (
       {
         type = "CHANNEL";
@@ -289,5 +289,5 @@ windows = {
 };
 mainwindows = {
   1 = { first_line = "8"; lines = "33"; };
-  6 = { first_line = "1"; lines = "7"; };
+  5 = { first_line = "1"; lines = "7"; };
 };
