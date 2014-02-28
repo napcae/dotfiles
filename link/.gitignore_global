@@ -99,4 +99,7 @@ Desktop.ini
 *.un~
 Session.vim
 .netrwhist
+*.swp
+*.swo
 *~
+

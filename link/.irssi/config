@@ -26,7 +26,8 @@ channels = (
   { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#Mechboards"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -77,6 +78,8 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  stoprecon = "RMRECONNS";
+  l = "mark";
 };
 
 statusbar = {
@@ -141,6 +144,7 @@ statusbar = {
         act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
+        usercount = { };
       };
     };
 
@@ -192,7 +196,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Trung Nguyen Chi";
+    real_name = "Chi Trung Nguyen (http://ctnguyen.net)";
     user_name = "napcae";
     nick = "napcae";
     hostname = "";
@@ -215,3 +219,85 @@ ignores = (
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
+keyboard = (
+  { key = "^C"; id = "erase_line"; data = ""; },
+  { key = "^L"; id = "command"; data = "mark "; }
+);
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#digitalocean";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#anapnea";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#git";
+        tag = "freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ruby";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#crunchbang";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#Mechboards";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#geekhack";
+        tag = "freenode";
+      }
+    );
+  };
+  9 = { name = "hilight"; sticky = "yes"; };
+};
+mainwindows = {
+  1 = { first_line = "8"; lines = "39"; };
+  9 = { first_line = "1"; lines = "7"; };
+};
