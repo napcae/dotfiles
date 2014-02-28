@@ -1,0 +1,7 @@
+echo "dirty: *"
+echo "unpushed: △"
+echo "unpulled: ▽"
+echo "dirty and unpulled: ▼"
+echo "unpushed and unpulled: ⬡"
+echo "dirty, unpushed and unpulled: ⬢"
+
