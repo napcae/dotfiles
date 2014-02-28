@@ -85,7 +85,7 @@ bind n:shift;ctrl;cmd chain focus 'nvALT' | toggle 'nvALT'
 layout WebDev 'Google Chrome' push left bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX/2
 layout WebDev 'iTerm' push right bar-resize:screenSizeX/2 | push right bar-resize:screenSizeX/2
 #bind Layout
-bind l:ctrl layout WebDev
+#bind l:ctrl layout WebDev
 
 # Window Move&Resize
 bind h:cmd;ctrl;shift nudge -5% +0
