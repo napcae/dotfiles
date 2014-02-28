@@ -48,8 +48,9 @@ if [[ "$(type -P brew)" ]]; then
     brew install $list
   fi
 
-  cask_recipes=(google-chrome\
-
+  cask_recipes=(google-chrome \
+    slate \
+    nvalt
   )
 
   cask_list="$(to_install "${cask_recipes[*]}" "$(brew list)")"
