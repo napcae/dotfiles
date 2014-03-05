@@ -95,5 +95,5 @@ then
 	sudo mkdir -v /src
 fi
 
-
-
+#http://docs.mopidy.com/en/latest/installation/#installationexport PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHhttp://docs.mopidy.com/en/latest/installation/#installationexport PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATHONPATH
+export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
