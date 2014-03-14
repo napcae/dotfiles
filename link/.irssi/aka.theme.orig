@@ -289,7 +289,11 @@ abstracts = {
 formats = {
   "fe-common/core" = {
 
+<<<<<<< HEAD
+    pubmsg = "{pubmsgnick $2 {pubnick \00307$0}}$1";
+=======
     pubmsg = "{pubmsgnick $2 {pubnick \00302$0}}$1";
+>>>>>>> origin/master
 
     #pubmsg = "{pubmsgnick $2 {pubnick \00311$0}}$1";
 
