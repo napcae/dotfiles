@@ -26,8 +26,7 @@ channels = (
   { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#Mechboards"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -268,20 +267,7 @@ windows = {
       }
     );
   };
-<<<<<<< HEAD
   7 = { name = "hilight"; sticky = "yes"; };
-=======
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#Mechboards";
-        tag = "freenode";
-      }
-    );
-  };
->>>>>>> origin/master
   8 = {
     items = (
       {
@@ -292,16 +278,8 @@ windows = {
       }
     );
   };
-<<<<<<< HEAD
 };
 mainwindows = {
   2 = { first_line = "10"; lines = "37"; };
   7 = { first_line = "1"; lines = "9"; };
-=======
-  9 = { name = "hilight"; sticky = "yes"; };
-};
-mainwindows = {
-  1 = { first_line = "8"; lines = "39"; };
-  9 = { first_line = "1"; lines = "7"; };
->>>>>>> origin/master
 };
