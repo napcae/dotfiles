@@ -143,6 +143,7 @@ statusbar = {
         act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
+        usercount = { };
       };
     };
 
@@ -207,16 +208,13 @@ settings = {
     bell_beeps = "yes";
   };
 };
-ignores = (
-  { level = "JOINS PARTS QUITS NICKS"; },
-  {
-    level = "ACTIONS";
-    pattern = "(away|gone|back|playin|weg|wech|returned)";
-    regexp = "yes";
-  }
-);
+ignores = ( { level = "ACTIONS"; }, { level = "PARTS NICKS"; } );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
+keyboard = (
+  { key = "^C"; id = "erase_line"; data = ""; },
+  { key = "^L"; id = "command"; data = "mark "; }
+);
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
   2 = {
@@ -254,18 +252,34 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#mosh";
+        name = "#ruby";
         tag = "freenode";
       }
     );
   };
-  6 = { name = "hilight"; sticky = "yes"; };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#crunchbang";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = { name = "hilight"; sticky = "yes"; };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#geekhack";
+        tag = "freenode";
+      }
+    );
+  };
 };
 mainwindows = {
-  1 = { first_line = "8"; lines = "39"; };
-  6 = { first_line = "1"; lines = "7"; };
+  2 = { first_line = "10"; lines = "37"; };
+  7 = { first_line = "1"; lines = "9"; };
 };
-keyboard = (
-  { key = "^C"; id = "erase_line"; data = ""; },
-  { key = "^L"; id = "command"; data = "mark "; }
-);
