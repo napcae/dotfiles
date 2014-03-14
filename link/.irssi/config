@@ -208,7 +208,10 @@ settings = {
     bell_beeps = "yes";
   };
 };
-ignores = ( { level = "ACTIONS"; }, { level = "PARTS NICKS"; } );
+ignores = (
+  { level = "PARTS NICKS"; },
+  { level = "ACTIONS JOINS QUITS"; }
+);
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
 keyboard = (
@@ -280,6 +283,6 @@ windows = {
   };
 };
 mainwindows = {
-  2 = { first_line = "10"; lines = "37"; };
+  1 = { first_line = "10"; lines = "37"; };
   7 = { first_line = "1"; lines = "9"; };
 };
