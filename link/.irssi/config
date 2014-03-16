@@ -208,10 +208,7 @@ settings = {
     bell_beeps = "yes";
   };
 };
-ignores = (
-  { level = "PARTS NICKS"; },
-  { level = "ACTIONS JOINS QUITS"; }
-);
+ignores = ( { level = "JOINS QUITS"; } );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
 keyboard = (
