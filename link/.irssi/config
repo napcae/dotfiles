@@ -280,6 +280,6 @@ windows = {
   };
 };
 mainwindows = {
-  1 = { first_line = "10"; lines = "37"; };
+  1 = { first_line = "10"; lines = "53"; };
   7 = { first_line = "1"; lines = "9"; };
 };
