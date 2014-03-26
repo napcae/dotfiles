@@ -256,11 +256,11 @@ windows = {
   };
   5 = {
     items = (
-      {
+      { 
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#git";
-        tag = "freenode";
+        name = "#ccc";
+        tag = "ccc";
       }
     );
   };
@@ -269,7 +269,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ruby";
+        name = "#git";
         tag = "freenode";
       }
     );
@@ -279,14 +279,24 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
+        name = "#ruby";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
         name = "#crunchbang";
         tag = "freenode";
       }
     );
   };
-  8 = { };
-  9 = { name = "hilight"; sticky = "yes"; };
-  10 = {
+  9 = { };
+  10 = { name = "hilight"; sticky = "yes"; };
+  11 = {
     items = (
       {
         type = "QUERY";
@@ -296,7 +306,7 @@ windows = {
       }
     );
   };
-  11 = {
+  12 = {
     items = (
       {
         type = "QUERY";
@@ -306,7 +316,7 @@ windows = {
       }
     );
   };
-  12 = {
+  13 = {
     items = (
       {
         type = "QUERY";
@@ -316,7 +326,7 @@ windows = {
       }
     );
   };
-  13 = {
+  14 = {
     items = (
       {
         type = "QUERY";
@@ -326,7 +336,7 @@ windows = {
       }
     );
   };
-  14 = {
+  15 = {
     items = (
       {
         type = "QUERY";
@@ -338,6 +348,6 @@ windows = {
   };
 };
 mainwindows = {
-  1 = { first_line = "10"; lines = "37"; };
-  9 = { first_line = "1"; lines = "9"; };
+  1 = { first_line = "10"; lines = "31"; };
+  10 = { first_line = "1"; lines = "9"; };
 };
