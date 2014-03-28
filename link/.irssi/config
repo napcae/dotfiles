@@ -211,13 +211,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_2 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_2 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -234,7 +227,7 @@ settings = {
     autolog = "yes";
     bell_beeps = "yes";
   };
-  "perl/core/scripts" = { awl_viewer = "no"; awl_block = "-14"; };
+  "perl/core/scripts" = { awl_viewer = "no"; awl_block = "10"; };
 };
 ignores = ( { level = "JOINS QUITS"; } );
 logs = { };
@@ -310,14 +303,24 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
+        name = "#reddit-dev";
+        tag = "freenode";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
         name = "#crunchbang";
         tag = "freenode";
       }
     );
   };
-  9 = { };
-  10 = { name = "hilight"; sticky = "yes"; };
-  11 = {
+  10 = { };
+  11 = { name = "hilight"; sticky = "yes"; };
+  12 = {
     items = (
       {
         type = "QUERY";
@@ -327,7 +330,7 @@ windows = {
       }
     );
   };
-  12 = {
+  13 = {
     items = (
       {
         type = "QUERY";
@@ -337,7 +340,7 @@ windows = {
       }
     );
   };
-  13 = {
+  14 = {
     items = (
       {
         type = "QUERY";
@@ -347,7 +350,7 @@ windows = {
       }
     );
   };
-  14 = {
+  15 = {
     items = (
       {
         type = "QUERY";
@@ -357,7 +360,7 @@ windows = {
       }
     );
   };
-  15 = {
+  16 = {
     items = (
       {
         type = "QUERY";
@@ -369,6 +372,6 @@ windows = {
   };
 };
 mainwindows = {
-  1 = { first_line = "10"; lines = "31"; };
-  10 = { first_line = "1"; lines = "9"; };
+  1 = { first_line = "10"; lines = "28"; };
+  11 = { first_line = "1"; lines = "9"; };
 };
