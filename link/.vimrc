@@ -10,6 +10,7 @@
 "   03. Theme/Colors ............ Colors, fonts, etc.                        "
 "   04. Vim UI .................. User interface behavior                    "
 "   05. Text Formatting/Layout .. Text, tab, indentation related             "
+"   06. Vundle Setup............. Vundle Plugin Package Manager              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,3 +72,13 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 06. Vundle                                                                  "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+Plugin 'bling/vim-airline'
