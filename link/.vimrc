@@ -82,3 +82,6 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
+
+" selecting solarized theme
+let g:airline_theme='solarized'
