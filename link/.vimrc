@@ -82,3 +82,5 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
+
+" let g:airline_powerline_fonts = 1
