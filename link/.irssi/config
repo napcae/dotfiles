@@ -211,13 +211,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_2 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_2 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -238,7 +231,8 @@ settings = {
 };
 ignores = (
   { level = "JOINS QUITS"; },
-  { mask = "SysJo"; level = "ALL"; }
+  { mask = "SysJo"; level = "ALL"; },
+  { mask = "kevbot"; level = "ALL"; }
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
