@@ -76,9 +76,16 @@ set nowrap                " don't wrap text
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Vundle                                                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"all vundle#rc()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-Plugin 'bling/vim-airline'
+"Plugin 'gmarik/vundle'
+"Plugin 'bling/vim-airline'
+
+
+" selecting solarized theme
+"let g:airline_theme = 'solarized'
+
+" selecting powerline fonts
+"let g:airline_powerline_fonts = 1
