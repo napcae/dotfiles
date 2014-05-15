@@ -204,13 +204,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -230,10 +223,10 @@ settings = {
   "perl/core/scripts" = { awl_viewer = "no"; awl_block = "10"; };
 };
 ignores = (
-  { level = "JOINS QUITS"; },
   { mask = "SysJo"; level = "ALL"; },
   { mask = "kevbot"; level = "ALL"; },
-  { mask = "Rev|SleepingFox"; level = "ALL"; }
+  { mask = "Rev|SleepingFox"; level = "ALL"; },
+  { level = "JOINS QUITS"; }
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
