@@ -227,7 +227,11 @@ settings = {
     autolog = "yes";
     bell_beeps = "yes";
   };
-  "perl/core/scripts" = { awl_viewer = "no"; awl_block = "10"; };
+  "perl/core/scripts" = {
+    awl_viewer = "no";
+    awl_block = "10";
+    trackbar_style = "%w";
+  };
 };
 ignores = (
   { mask = "SysJo"; level = "ALL"; },
@@ -308,7 +312,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ruby";
+        name = "#crunchbang";
         tag = "freenode";
       }
     );
@@ -318,7 +322,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#crunchbang";
+        name = "#binaergewitter";
         tag = "freenode";
       }
     );
@@ -328,8 +332,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#git";
-        tag = "freenode";
+        name = "#r/leagueoflegends";
+        tag = "quakenet";
       }
     );
   };
@@ -353,7 +357,16 @@ windows = {
       }
     );
   };
-  13 = { name = "hilight"; sticky = "yes"; };
+  13 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "MokaKoma";
+        tag = "freenode";
+      }
+    );
+  };
   14 = {
     items = (
       {
@@ -364,8 +377,19 @@ windows = {
       }
     );
   };
+  15 = { name = "hilight"; sticky = "yes"; };
+  16 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#i3";
+        tag = "twice-irc";
+      }
+    );
+  };
 };
 mainwindows = {
-  11 = { first_line = "8"; lines = "59"; };
-  13 = { first_line = "1"; lines = "7"; };
+  1 = { first_line = "8"; lines = "31"; };
+  15 = { first_line = "1"; lines = "7"; };
 };
