@@ -41,6 +41,10 @@ bindsym $mod+space exec dmenu_run
 #screen locker (first move to "safe" workspace without any chat app)
 bindsym Control+Mod1+l exec i3-msg workspace 1 && i3lock -c 111111 -d
 
+#tab
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
