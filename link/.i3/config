@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-exec nm-applet
+#exec nm-applet
 exec i3-sensible-terminal
 
 set $mod Mod4
