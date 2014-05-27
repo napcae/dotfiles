@@ -10,7 +10,4 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 #adding mosh sslh support
 #alias mosh="mosh --bind-server=any "
-<<<<<<< HEAD
-=======
 unalias -a mosh
->>>>>>> 7cb4505ebc439e5ac875efa22c51201463742c45
