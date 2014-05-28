@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #exec nm-applet
 exec i3-sensible-terminal
+exec mpd
 
 set $mod Mod4
 
@@ -171,4 +172,10 @@ bindsym XF86AudioPrev exec mpc prev
 # finds out, if available)
 bar {
         status_command i3status
+        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+        font pango:DejaVu Sans Mono 11
+        colors {
+            background #1D1F21 
+        } 
+
 }
