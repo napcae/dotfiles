@@ -11,6 +11,7 @@
 #exec nm-applet
 exec i3-sensible-terminal
 exec mpd
+exec feh -z --bg-scale ~/Pictures/Wp/
 
 set $mod Mod4
 
