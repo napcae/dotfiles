@@ -9,3 +9,6 @@ link/.ssh/git*
 link/.gnupg/*
 *.swp
 link/.mpd/mpdstate
+link/.mpd/mpd.log
+link/.mpd/mpd.pid
+link/.mpd/mpdstate
