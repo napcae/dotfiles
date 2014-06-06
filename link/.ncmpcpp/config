@@ -1,0 +1,23 @@
+####################################################
+## this is example configuration file, copy it to ##
+## ~/.ncmpcpp/config and set up your preferences  ##
+####################################################
+#
+##### connection settings #####
+#
+## set it in order to make tag editor and renaming files work properly
+#
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "/var/lib/mpd/music"
+mpd_crossfade_time = "3"
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_ouput_name = "my_fifo"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+#visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
+# Linien-Farbe des Visualizer:
+visualizer_color = "blue" # Farbe des Visualizer
