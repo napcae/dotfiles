@@ -1,3 +1,8 @@
+#256 color support for gnome-terminal
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 # Hostcolors
 # computers
 bounty=$(tput setaf 100)        #macbook, ocker  
@@ -10,11 +15,6 @@ milkyway=$(tput setaf 123)      #ams1, whiteblue
 duplo=$(tput setaf 3)           #ams1, yellow
 
 hostn=`hostname -s`
-
-#256 color support for gnome-terminal
-if [ "$TERM" == "xterm" ]; then
-    export TERM=xterm-256color
-fi
 
 #debugging
 #echo $hostn
