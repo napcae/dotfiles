@@ -2,7 +2,7 @@
 # computers
 bounty=$(tput setaf 100)        #macbook, ocker  
 lion=$(tput setaf 57)           #macbook air, purple
-butterfinger=$(tput setaf 15)   #macbook retina, white
+butterfinger=$(tput setaf 11)   #macbook retina, yellow pastel
 corny=$(tput setaf 28)          #raspberry, green
 
 # server
@@ -10,6 +10,11 @@ milkyway=$(tput setaf 123)      #ams1, whiteblue
 duplo=$(tput setaf 3)           #ams1, yellow
 
 hostn=`hostname -s`
+
+#256 color support for gnome-terminal
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
 
 #debugging
 #echo $hostn
@@ -279,3 +284,4 @@ PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
 export LANG="de_DE.UTF-8"
 export LC_CTYPE="de_DE.UTF-8"
 export LC_ALL="de_DE.UTF-8"
+
