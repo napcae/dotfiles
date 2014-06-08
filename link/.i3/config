@@ -183,6 +183,7 @@ bar {
         font pango:DejaVu Sans Mono 11
         colors {
             background #1D1F29 
+            focused_workspace #074F3C #0B7C5E #ffffff
         } 
 
 }
