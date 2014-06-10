@@ -33,7 +33,8 @@ channels = (
   { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#geekhack"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#aerofoil"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#Mechboards"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -86,6 +87,7 @@ aliases = {
   RESET = "set -default";
   stoprecon = "RMRECONNS";
   l = "mark";
+  ns = "/query nickserv";
 };
 
 statusbar = {
@@ -211,13 +213,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_2 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_2 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -329,7 +324,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#binaergewitter";
+        name = "#aerofoil";
         tag = "freenode";
       }
     );
@@ -339,8 +334,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#r/leagueoflegends";
-        tag = "quakenet";
+        name = "#i3";
+        tag = "twice-irc";
       }
     );
   };
@@ -379,7 +374,7 @@ windows = {
       {
         type = "QUERY";
         chat_type = "IRC";
-        name = "NickServ";
+        name = "ke7ofi";
         tag = "freenode";
       }
     );
@@ -390,23 +385,33 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#i3";
-        tag = "twice-irc";
+        name = "#ampache";
+        tag = "freenode";
       }
     );
   };
   17 = {
     items = (
       {
-        type = "CHANNEL";
+        type = "QUERY";
         chat_type = "IRC";
-        name = "#mopidy";
+        name = "ChanServ";
+        tag = "freenode";
+      }
+    );
+  };
+  18 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "NickServ";
         tag = "freenode";
       }
     );
   };
 };
 mainwindows = {
-  1 = { first_line = "8"; lines = "31"; };
+  1 = { first_line = "8"; lines = "54"; };
   15 = { first_line = "1"; lines = "7"; };
 };
