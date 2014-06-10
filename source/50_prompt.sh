@@ -1,8 +1,13 @@
+#256 color support for gnome-terminal
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 # Hostcolors
 # computers
 bounty=$(tput setaf 100)        #macbook, ocker  
 lion=$(tput setaf 57)           #macbook air, purple
-butterfinger=$(tput setaf 15)   #macbook retina, white
+butterfinger=$(tput setaf 11)   #macbook retina, yellow pastel
 corny=$(tput setaf 28)          #raspberry, green
 
 # server
@@ -279,3 +284,4 @@ PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
 export LANG="de_DE.UTF-8"
 export LC_CTYPE="de_DE.UTF-8"
 export LC_ALL="de_DE.UTF-8"
+
