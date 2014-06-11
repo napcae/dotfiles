@@ -87,7 +87,8 @@ aliases = {
   RESET = "set -default";
   stoprecon = "RMRECONNS";
   l = "mark";
-  ns = "/query nickserv";
+  ns = "/msg NickServ";
+  cs = "/msg ChanServ";
 };
 
 statusbar = {
@@ -213,6 +214,13 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_2 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_2 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -245,7 +253,8 @@ logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
 keyboard = (
   { key = "^C"; id = "erase_line"; data = ""; },
-  { key = "^L"; id = "command"; data = "mark "; }
+  { key = "^L"; id = "command"; data = "mark "; },
+  { key = "meta-z"; id = "change_window"; data = "16"; }
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
