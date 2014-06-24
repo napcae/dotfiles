@@ -8,6 +8,8 @@ alias gpa='gp --all'
 alias gu='git pull'
 alias gl='git log'
 alias gg='gl --decorate --oneline --graph --date-order --all'
+alias ggc='git log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"
+'
 alias gs='git status'
 alias gst='gs'
 alias gd='git diff'
