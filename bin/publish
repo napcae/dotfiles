@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+
+DATA=$1
+cp $DATA /Users/napcae/git/napcaesmind-blog/_site/$DATA
+
+cd /Users/napcae/git/napcaesmind-blog/
+git add -f /Users/napcae/git/napcaesmind-blog/_site/$DATA
+
+git commit -m "Adding File $DATA"
+
+git push origin
