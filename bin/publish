@@ -2,11 +2,21 @@
 
 
 DATA=$1
-cp $DATA /Users/napcae/git/napcaesmind-blog/_site/$DATA
+BASE=$(basename "$DATA")
+
+cp -R "$DATA" "/Users/napcae/git/napcaesmind-blog/public/$BASE"
+echo cp -R "$DATA" "/Users/napcae/git/napcaesmind-blog/public/$BASE"
 
 cd /Users/napcae/git/napcaesmind-blog/
-git add -f /Users/napcae/git/napcaesmind-blog/_site/$DATA
 
-git commit -m "Adding File $DATA"
+jekyll build
+git add -f /Users/napcae/git/napcaesmind-blog/_site/public/"$BASE"
+#echo git add -f /Users/napcae/git/napcaesmind-blog/_site/public/"$BASE"
+git add -f /Users/napcae/git/napcaesmind-blog/public/"$BASE"
+#echo git add -f /Users/napcae/git/napcaesmind-blog/public/"$BASE"
+git add -f /Users/napcae/git/napcaesmind-blog/_site/blog/feed.xml
 
+git commit -m "Adding File $BASE"
+
+#echo  git commit -m "Adding File $BASE"
 git push origin
