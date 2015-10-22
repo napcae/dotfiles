@@ -1,8 +1,6 @@
 #256 color support for gnome-terminal
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
-else
-    export TERM=xterm
 fi
 
 # Hostcolors
