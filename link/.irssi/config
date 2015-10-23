@@ -207,6 +207,13 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -233,7 +240,7 @@ ignores = (
   { mask = "SysJo"; level = "ALL"; },
   { mask = "kevbot"; level = "ALL"; },
   { mask = "Rev|SleepingFox"; level = "ALL"; },
-  { level = "JOINS QUITS"; }
+  { level = "JOINS PARTS QUITS MODES NICKS"; }
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
