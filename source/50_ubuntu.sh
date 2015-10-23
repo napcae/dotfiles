@@ -34,4 +34,4 @@ alias iptables="iptables --line-numbers"
 #}
 
 # source autojump
-#.  /usr/bin/autojump
+. /usr/share/autojump.bash 
