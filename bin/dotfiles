@@ -2,7 +2,7 @@
 
 #forked from https://github.com/cowboy/dotfiles
 
-echo 'Dotfiles - "napcae" Chi Trung Nguyen - http://napcaesmind.de/'
+echo 'Dotfiles - "napcae" Chi Trung Nguyen - http://ctnguyen.net/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
