@@ -18,8 +18,13 @@ function src() {
 function dotfiles() {
   ~/.dotfiles/bin/dotfiles "$@" && src
 }
+if [[ $- =~ i ]]
+then
+    src
+else
+    export PS1="\u@\h \w> "
+fi
 
-src
 
 
 ### Added by the Heroku Toolbelt
