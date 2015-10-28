@@ -1,2 +1,2 @@
 #!/bin/bash
-qlmanage -p $1
+qlmanage -p "$1"
