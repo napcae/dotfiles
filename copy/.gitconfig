@@ -4,11 +4,19 @@
 [core]
 	excludesfile = /Users/napcae/.gitignore_global
 	editor = vim
+[diff]
+    tool = opendiff
+[difftool "opendiff"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [color]
 	status = true
+[push]
+	default = matching
+[merge]
+	tool = opendiff
