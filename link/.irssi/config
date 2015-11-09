@@ -207,18 +207,11 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
   core = {
-    real_name = "Chi Trung Nguyen";
+    real_name = "napcae";
     user_name = "napcae";
     nick = "napcae";
     hostname = "";
