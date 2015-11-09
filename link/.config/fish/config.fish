@@ -4,3 +4,4 @@ begin
         source $AUTOJUMP_PATH
     end
 end
+rvm default
