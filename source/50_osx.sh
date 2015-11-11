@@ -83,7 +83,7 @@ alias bbb='brew upgrade && brew update'
 vlc=/Applications/VLC.app/Contents/MacOS/
 git=/Users/napcae/Documents/Git
 
-alias chrome='open /opt/homebrew-cask/Caskroom/google-chrome/stable-channel/Google\ Chrome.app/'
+alias chrome='open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app '
 alias et='rm -rf ~/.Trash/*'
 
 #prepare for new machine
