@@ -1,4 +1,3 @@
-
 # Git shortcuts
 
 alias g='git'
@@ -81,6 +80,6 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
   fi
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
+#if [ -f `brew --prefix`/etc/bash_completion ]; then
+#    . `brew --prefix`/etc/bash_completion
+#fi
