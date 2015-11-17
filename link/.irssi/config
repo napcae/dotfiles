@@ -8,32 +8,17 @@ servers = (
     ssl_verify = "yes";
     ssl_capath = "/etc/ssl/certs";
     autoconnect = "yes";
-  },
-  {
-    address = "ray.blafasel.de";
-    chatnet = "ccc";
-    port = "6697";
-    use_ssl = "yes";
-    ssl_verify = "no";
-    autoconnect = "yes";
   }
 );
 
-chatnets = {
-  freenode = { type = "IRC"; nick = "napcae"; };
-  ccc = { type = "IRC"; };
-};
+chatnets = { freenode = { type = "IRC"; nick = "napcae"; }; };
 
 
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "#ccc"; chatnet = "ccc"; autojoin = "yes"; },
-  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#git"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#aerofoil"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#Mechboards"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
@@ -207,13 +192,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -280,19 +258,23 @@ windows = {
     sticky = "yes";
     parent = "1";
   };
-  4 = {
+  4 = { sticky = "yes"; parent = "1"; };
+  5 = { sticky = "yes"; parent = "1"; };
+  6 = {
     items = (
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#machomebrew";
+        name = "#Mechboards";
         tag = "freenode";
       }
     );
     sticky = "yes";
     parent = "1";
   };
-  5 = {
+  7 = { sticky = "yes"; parent = "1"; };
+  8 = { sticky = "yes"; parent = "1"; };
+  9 = {
     items = (
       {
         type = "CHANNEL";
@@ -304,43 +286,8 @@ windows = {
     sticky = "yes";
     parent = "1";
   };
-  6 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "nohitall";
-        tag = "freenode";
-      }
-    );
-    sticky = "yes";
-    parent = "1";
-  };
-  7 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "reynir";
-        tag = "freenode";
-      }
-    );
-    sticky = "yes";
-    parent = "1";
-  };
-  8 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "MokaKoma";
-        tag = "freenode";
-      }
-    );
-    sticky = "yes";
-    parent = "1";
-  };
-  9 = {
+  10 = { sticky = "yes"; parent = "1"; };
+  11 = {
     items = (
       {
         type = "QUERY";
@@ -350,55 +297,22 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "11";
+    parent = "12";
   };
-  10 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "NickServ";
-        tag = "freenode";
-      }
-    );
-    sticky = "yes";
-    parent = "11";
-  };
-  11 = { name = "hilight"; sticky = "yes"; };
   12 = {
     items = (
       {
         type = "QUERY";
         chat_type = "IRC";
         name = "NickServ";
-        tag = "snoonet";
-      }
-    );
-  };
-  13 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#reddit";
-        tag = "snoonet";
-      }
-    );
-    sticky = "yes";
-    parent = "1";
-  };
-  14 = {
-    items = (
-      {
-        type = "QUERY";
-        chat_type = "IRC";
-        name = "The-Compiler";
         tag = "freenode";
       }
     );
+    sticky = "yes";
   };
+  13 = { name = "hilight"; sticky = "yes"; parent = "12"; };
 };
 mainwindows = {
-  1 = { first_line = "12"; lines = "37"; };
-  11 = { first_line = "1"; lines = "11"; };
+  1 = { first_line = "9"; lines = "41"; };
+  12 = { first_line = "1"; lines = "8"; };
 };
