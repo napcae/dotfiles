@@ -22,3 +22,8 @@ function chrome
      open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
    end  
 end
+
+function google
+   /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "http://www.google.de/search?q=$argv";
+   open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
+end
