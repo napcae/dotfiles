@@ -13,3 +13,17 @@ rvm default
 function subl
     open -a "Sublime Text 2.app" $argv
 end
+
+function chrome
+   if count $argv > /dev/null
+     /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $argv;
+     open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
+   else  
+     open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
+   end  
+end
+
+function google
+   /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "http://www.google.de/search?q=$argv";
+   open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
+end
