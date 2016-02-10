@@ -30,8 +30,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -126,12 +126,12 @@ set nowrap                " don't wrap text
 "all vundle#rc()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-Plugin 'bling/vim-airline'
+"Plugin 'gmarik/vundle'
+"Plugin 'bling/vim-airline'
 
 
 " selecting solarized theme
 "let g:airline_theme = 'solarized'
 
 " selecting powerline fonts
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
