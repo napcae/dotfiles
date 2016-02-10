@@ -281,7 +281,7 @@ PS1="\[$prompt_user_color\]\u\[$prompt_reset\] \
 
 ##http://www.bergspot.com/blog/2012/02/how-to-fix-warning-setlocale-lc_ctype-cannot-change-locale-utf-8/
 ##manual locale set
-export LANG="de_DE.UTF-8"
-export LC_CTYPE="de_DE.UTF-8"
-export LC_ALL="de_DE.UTF-8"
+export LANG="en_GB.UTF-8"
+export LC_CTYPE="en_GB.UTF-8"
+export LC_ALL="en_GB.UTF-8"
 
