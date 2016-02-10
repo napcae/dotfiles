@@ -30,8 +30,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -91,8 +91,8 @@ autocmd Syntax json sou ~/.vim/syntax/json.vim
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 " Highlight characters that go over 80 columns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Vim UI                                                                 "
@@ -126,12 +126,12 @@ set nowrap                " don't wrap text
 "all vundle#rc()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-Plugin 'bling/vim-airline'
+"Plugin 'gmarik/vundle'
+"Plugin 'bling/vim-airline'
 
 
 " selecting solarized theme
 "let g:airline_theme = 'solarized'
 
 " selecting powerline fonts
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
