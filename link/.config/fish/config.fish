@@ -27,3 +27,5 @@ function google
    /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "http://www.google.de/search?q=$argv";
    open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
