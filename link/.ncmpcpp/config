@@ -30,6 +30,8 @@ visualizer_type = "spectrum" (spectrum/wave)
 visualizer_look = "∙▋"
 visualizer_color = "green"
 
+user_interface = "alternative"
+
 main_window_highlight_color = "white"
 
 progressbar_look = "▀▀ "
