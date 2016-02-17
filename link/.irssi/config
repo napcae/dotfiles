@@ -168,13 +168,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -308,10 +301,10 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
-  },
+  }
 );
 channels = (
   { name = "#machomebrew"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
-)
+  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; }
+);
