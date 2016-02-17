@@ -314,3 +314,4 @@ channels = (
   { name = "#machomebrew"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
+)
