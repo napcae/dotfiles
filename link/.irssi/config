@@ -50,6 +50,7 @@ aliases = {
   l = "mark";
   ns = "/msg NickServ";
   cs = "/msg ChanServ";
+  addallchannels = "script exec foreach my \\$channel (Irssi::channels()) { Irssi::command(\"channel add -auto \\$channel->{name} \\$channel->{server}->{tag} \\$channel->{key}\")\\;}";
 };
 
 statusbar = {
@@ -179,7 +180,7 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "aka.theme";
+    theme = "aka";
     term_charset = "utf-8";
     autolog = "yes";
     bell_beeps = "yes";
@@ -306,5 +307,7 @@ servers = (
 channels = (
   { name = "#machomebrew"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#mailstache"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#respiratio"; chatnet = "freenode"; autojoin = "yes"; }
 );
