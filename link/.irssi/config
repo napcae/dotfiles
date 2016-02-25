@@ -68,22 +68,25 @@ statusbar = {
     topicbarend = "{topicsbend}";
 
     # treated "normally", you could change the time/user name to whatever
-    time = "{sb $Z}";
-    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+    time = "%K {sb %G$Z}%K {sbaway $A} %g$topic%K";
+    user = "{sb {sbnickmode $cumode}{sbmode $usermode}}";
 
     # treated specially .. window is printed with non-empty windows,
     # window_empty is printed with empty windows
-    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
-    window_empty = "{sb $winref{sbservertag $tag}}";
-    prompt = "{prompt $[.15]itemname}";
+
+    window = "";
+    #window_empty = "{sb %C{sbservertag $tag}}%n";   
+    window_empty = "{sb $winref/{sbservertag $tag}}";
+    #prompt = "$winref%K/{prompt $[.15]itemname}";
+    prompt = "";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
 
     # all of these treated specially, they're only displayed when needed
     lag = "{sb Lag: $0-}";
-    act = "{sb Act: $0-}";
-    more = "-- more --";
+    act = "{sb $0-}";
+    more = "-- %Ymore below%n --";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -98,7 +101,7 @@ statusbar = {
       # window, root
       type = "window";
       # top, bottom
-      placement = "bottom";
+      placement = "top";
       # number
       position = "1";
       # active, inactive, always
@@ -114,7 +117,6 @@ statusbar = {
         lag = { priority = "-1"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
-        usercount = { };
       };
     };
 
@@ -131,6 +133,7 @@ statusbar = {
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
     };
 
     # we treat input line as yet another statusbar :) It's possible to
@@ -139,21 +142,16 @@ statusbar = {
       type = "root";
       placement = "bottom";
       # we want to be at the bottom always
-      position = "100";
-      visible = "always";
-      items = {
-        prompt = { priority = "-1"; };
-        prompt_empty = { priority = "-1"; };
-        # treated specially, this is the real input line.
-        input = { priority = "10"; };
-      };
+      position = "1";
+      visible = "active";
+      items = { input = { }; };
     };
 
     # topicbar
     topic = {
       type = "root";
       placement = "top";
-      position = "1";
+      position = "2";
       visible = "always";
       items = {
         topicbarstart = { priority = "100"; };
@@ -161,11 +159,56 @@ statusbar = {
         topic_empty = { };
         topicbarend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
     };
+    window_add = { items = { }; disabled = "yes"; };
+    add = { disabled = "yes"; };
+    delete = { disabled = "yes"; };
+    prompt_empty = { position = "0"; disabled = "yes"; };
+    #   rollestatus = { items = {  = { }; }; disabled = "yes"; };
+    #   status = { items = { }; disabled = "yes"; };
+    #   rollstatus = { disabled = "yes"; };
+    asd = {
+      position = "0";
+      placement = "bottom";
+      items = { };
+      disabled = "yes";
+    };
+    topic_empty = { disabled = "yes"; };
+    remove = { items = { }; disabled = "yes"; };
+    channels = { items = { chanact = { }; }; disabled = "yes"; };
+    statusbar = {
+
+      #rollen statusbar:
+
+      items = {
+        #           barstart = "--------------";
+        erotin = {
+          items = { barstart = "asdasd--------------"; };
+          priority = "100";
+          alignment = "left";
+          disabled = "no";
+          placement = "bottom";
+          position = "0";
+        };
+      };
+    };
+
+
+    "-before" = { disabled = "yes"; };
+    aw1_0 = { position = "0"; disabled = "yes"; };
+    empty = { placement = "bottom"; position = "0"; disabled = "yes"; };
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
@@ -180,15 +223,31 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "aka";
+    theme = "weed";
     term_charset = "utf-8";
     autolog = "yes";
     bell_beeps = "yes";
   };
   "perl/core/scripts" = {
-    awl_viewer = "no";
-    awl_block = "10";
+    awl_all_disable = "no";
+    awl_automode = "sbar";
+    awl_block = "20";
+    awl_columns = "1";
+    awl_display_key = "%K%0$H $N %N";
+    awl_display_key_active = "%1 %W$C %N";
+    awl_display_nokey = "%K%0$H $N %N";
+    awl_display_nokey_active = "%1 %W$C %N";
+    awl_height_adjust = "1";
+    awl_hide_data = "0";
+    awl_maxlines = "9";
+    awl_placement = "bottom";
+    awl_position = "0";
+    awl_prefer_name = "yes";
+    awl_sbar_maxlength = "yes";
+    awl_separator = "%N %N";
+    awl_sort = "refnum";
     trackbar_style = "%w";
+    awl_viewer = "no";
   };
 };
 ignores = (
