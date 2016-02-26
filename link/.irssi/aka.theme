@@ -288,24 +288,31 @@ abstracts = {
 };
 formats = {
   "fe-common/core" = {
+    line_start = "{line_start}";
+    line_start_irssi = "{line_start}";
+
+    join = "%K{channick $[-13]0} %G>%K has joined";
+    part = "%K{channick $[-13]0} %R<%K has left {channel $2}";
+    kick = "%K{channick $[-13]0} %R<%K kicked by {nick $2} {reason %C$3}";
+    quit = "%K{channick $[-13]0} %R<%K has quit irc";
+    quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
+    nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
+    your_nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
 
     pubmsg = "{pubmsgnick $2 {pubnick \003\00309$[-10]0}}$1";
-
-    #pubmsg = "{pubmsgnick $2 {pubnick \00311$0}}$1";
-
-    join = "%r %w  %r$0 %w %r %n {chanhost $1} %wjoins %r$2";
-    part = "%w« %r$0 %w«%n {chanhost $1} %wleaves %r$2 %r[%w$3%r]";
-    quit = "%r«%w« %r$0 %w«%r«%n {chanhost $1} %wquits %r[%w$2%r]";
-    kick = "%w«%r«%R!%r«%w« %r$0%n has been kicked from {channel $1} by {nick $2} %r[%w$3%r]";
     own_msg = "{ownmsgnick {ownnick $[-16]0$2}}$1";
     own_msg_channel = "{ownmsgnick {ownnick $[-16]0$3}{msgchannel $1}}$2";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-16]2}}$1";
-    pubmsg_me = "{pubmsgmenick $nickalign$2 {menick $[.11]0$nicktrunc}}$1";
-    pubmsg_me_channel = "{pubmsgmenick $nickalign$3 {menick $[.11]0$nicktrunc}{msgchannel $1}}$2";
-    pubmsg_hilight = "{pubmsghinick $0 $nickalign$3 $[.11]1$nicktrunc}$2";
-    pubmsg_hilight_channel = "{pubmsghinick $0 $nickalign$4 $[.11]1$nicktrunc{msgchannel $2}}$3";
-    pubmsg_channel = "{pubmsgnick {pubnick %C$[-16]0}$2}$1";
+    pubmsg_me = "{pubmsgmenick {menick $[-16]0}$2}$1";
+    pubmsg_me_channel = "{pubmsgmenick {menick $[-16]0$3}{msgchannel $1}}$2";
+    # pubmsg_hilight = "{pubmsghinick $0 $0 $[-13]1$3%n}$2";
+    pubmsg_hilight = "{pubmsghinick $0 $0 $[-16]1$3%n}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $[-16]1$4{msgchannel $2}}$3";
+    pubmsg_channel = "{pubmsgnick {pubnick %g$[-16]0}$2}$1";
     msg_private_query = "{privmsgnick $[-16]0}$2";
+    new_topic = "        %ctopic %K= %|%B'$2' %non %b$1%n%K[set by {nick %y$0}]";
+
+    endofnames = "               Total of {hilight $1} nicks {comment {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal}";
   };
   "fe-common/irc" = {
     own_action = "{ownaction $[-14]0} $1";
