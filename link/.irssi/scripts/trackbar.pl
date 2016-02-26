@@ -96,7 +96,7 @@ my %IRSSI = (
 
 my %config;
 
-Irssi::settings_add_str('trackbar', 'trackbar_string' => '-');
+Irssi::settings_add_str('trackbar', 'trackbar_string' => '_');
 $config{'trackbar_string'} = Irssi::settings_get_str('trackbar_string');
 
 Irssi::settings_add_str('trackbar', 'trackbar_style' => '%K');
