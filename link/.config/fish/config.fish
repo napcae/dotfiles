@@ -28,4 +28,6 @@ function google
    open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
 end
 
+set -x GOPATH $HOME/go
+
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
