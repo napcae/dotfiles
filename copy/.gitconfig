@@ -1,6 +1,6 @@
 [user]
 	name = Chi Trung Nguyen
-	email = napcae@fastmail.fm
+	email = git@ctnguyen.net
 [core]
 	excludesfile = /Users/napcae/.gitignore_global
 	editor = vim
