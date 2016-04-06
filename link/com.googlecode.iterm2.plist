@@ -9401,10 +9401,14 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/link</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -9435,14 +9439,22 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>617 203 1007 189 0 0 2048 1257 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>996 595 606 456 0 0 1920 1177 </string>
+	<string>46 219 606 456 0 0 2048 1257 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-1270 589 620 392 -1920 0 1920 1177 </string>
+	<string>714 649 620 392 0 0 2048 1257 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>1024 630 1024 627 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 765 1920 412 0 0 1920 1177 </string>
+	<string>39 736 914 514 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>672 20 1242 570 0 0 1920 1177 </string>
+	<string>229 96 570 451 0 0 1680 1028 </string>
+	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -14767,14 +14779,32 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncLastTipTime</key>
+	<real>469204009.00551099</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<true/>
+	<key>NoSyncSuppressAnnyoingBellOffer</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>479121275.06471503</real>
+	<real>468379804.33109999</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>478531525.11169797</real>
+	<real>465811285.81815302</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>480433695.034495</real>
+	<real>468723212.07863402</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -14843,7 +14873,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-23T08:13:35Z</date>
+	<date>2016-04-06T15:01:15Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -14881,6 +14911,8 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1427114496</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>https</key>
