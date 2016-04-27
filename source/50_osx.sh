@@ -11,7 +11,7 @@ export PATH
 alias c="tr -d '\n' | pbcopy"
 
 # Make 'less' more.
-eval "$(lesspipe.sh)"
+##eval "$(lesspipe.sh)"
 
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
@@ -97,3 +97,4 @@ fi
 
 #http://docs.mopidy.com/en/latest/installation/#installationexport PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHhttp://docs.mopidy.com/en/latest/installation/#installationexport PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATHONPATH
 export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+eval $(docker-machine env default)
