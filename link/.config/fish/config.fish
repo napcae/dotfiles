@@ -8,7 +8,6 @@ begin
         source $AUTOJUMP_PATH
     end
 end
-rvm default
 
 function subl
     open -a "Sublime Text 2.app" $argv
@@ -28,8 +27,6 @@ function google
    open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
 end
 
-set -x GOPATH $HOME/go
-set -x PATH $HOME/go/bin $PATH
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 eval (docker-machine env default)
