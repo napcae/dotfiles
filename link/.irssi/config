@@ -241,6 +241,7 @@ settings = {
     awl_sort = "refnum";
     trackbar_style = "%w";
     awl_viewer = "no";
+    ttyyircbot_api_token = "B5771FEC-2120-B04B-89EC-AEB97B0F3CCB";
   };
 };
 ignores = (
@@ -336,6 +337,12 @@ chatnets = {
     nick = "napcae";
     realname = "Chi Trung Nguyen";
   };
+  darkscience = {
+    type = "IRC";
+    nick = "napcae";
+    username = "napcae";
+    realname = "napcae";
+  };
 };
 servers = (
   {
@@ -354,6 +361,15 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "irc.darkscience.net";
+    chatnet = "darkscience";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
+    autoconnect = "yes";
   }
 );
 channels = (
@@ -361,5 +377,6 @@ channels = (
   { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#mailstache"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#respiratio"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#respiratio"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#sysadmin"; chatnet = "darkscience"; autojoin = "yes"; }
 );

@@ -9403,12 +9403,19 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+<<<<<<< HEAD
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/link</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+=======
+	<key>NSNavLastRootDirectory</key>
+	<string>~/.dotfiles/link</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 459}</string>
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -9439,6 +9446,7 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+<<<<<<< HEAD
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>990 312 513 299 0 0 2048 1257 </string>
 	<key>NSWindow Frame Preferences</key>
@@ -9455,6 +9463,18 @@
 	<string>0 0 2048 1280 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>266 148 570 429 0 0 2048 1257 </string>
+=======
+	<key>NSWindow Frame Preferences</key>
+	<string>2116 720 606 456 1920 0 1920 1177 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>201 456 400 129 0 0 1920 1177 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2570 588 620 392 1920 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 0</key>
+	<string>1989 163 1578 868 1920 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>672 20 1242 570 0 0 1920 1177 </string>
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537_selection</key>
@@ -14783,6 +14803,7 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+<<<<<<< HEAD
 	<key>NoSyncConfirmBeta</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
@@ -14794,11 +14815,19 @@
 	<key>NoSyncTimeOfFirstLaunchForIncompatibilityWarnings</key>
 	<real>485080468.28966898</real>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>484130045.00476801</real>
+=======
+	<key>NoSyncInstallationId</key>
+	<string>D5FAF4B7-3A39-44B8-992E-2C2C43D45A1F</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>479121275.06471503</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>478531525.11169797</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>484130045.00476801</real>
+	<real>484491519.45952302</real>
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -14863,6 +14892,7 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
+<<<<<<< HEAD
 	<string>https://iterm2.com/appcasts/nightly.xml?shard=98</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
@@ -14872,6 +14902,13 @@
 	<false/>
 	<key>SUSkippedVersion</key>
 	<string>3.0.20160823-nightly</string>
+=======
+	<string>https://iterm2.com/appcasts/testing3.xml?shard=57</string>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2016-05-17T07:23:07Z</date>
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -21863,7 +21900,11 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
+<<<<<<< HEAD
 	<string>3.0.20160822-nightly</string>
+=======
+	<string>2.9.20160426</string>
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
