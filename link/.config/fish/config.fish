@@ -45,3 +45,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 set -U -x HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+export LANG=en_GB.UTF-8
+export LC_ALL=en_GB.UTF-8
