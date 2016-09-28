@@ -6,14 +6,13 @@
 # Hostcolors
 # computers
 #bounty=$(tput setaf 100)        #macbook, ocker  
-duplo=$(tput setaf 57)           #macbook air, purple
 butterfinger=$(tput setaf 11)   #macbook retina, yellow pastel
-dove=$(tput setaf 28)          #raspberry, green
 
 
 # server
 milkyway=$(tput setaf 123)      #ams1, whiteblue
-duplo=$(tput setaf 3)           #ams1, yellow
+duplo=$(tput setaf 57)           #ams1, purple
+dove=$(tput setaf 28)          #raspberry, green
 
 hostn=`hostname -s`
 
@@ -78,12 +77,6 @@ else
 fi
 
 case $hostn in
-lion)
-    PROMPT_DEVICE_COLOR=$lion
-    ;;
-corny)
-    PROMPT_DEVICE_COLOR=$corny
-    ;;
 bounty)
     PROMPT_DEVICE_COLOR=$bounty
     ;;
@@ -96,8 +89,14 @@ butterfinger)
 wonderbar)
     PROMPT_DEVICE_COLOR=$wonderbar
     ;;
+duplo)
+    PROMPT_DEVICE_COLOR=$duplo
+    ;;
 kitkat)
     PROMPT_DEVICE_COLOR=$kitkat
+    ;;
+dove)
+    PROMPT_DEVICE_COLOR=$dove
     ;;
 milkyway)
     PROMPT_DEVICE_COLOR=$milkyway
