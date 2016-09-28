@@ -103,3 +103,6 @@ Session.vim
 *.swo
 *~
 
+# vagrant #
+###########
+.vagrant
