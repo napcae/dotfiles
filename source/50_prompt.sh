@@ -5,10 +5,11 @@
 
 # Hostcolors
 # computers
-bounty=$(tput setaf 100)        #macbook, ocker  
-lion=$(tput setaf 57)           #macbook air, purple
+#bounty=$(tput setaf 100)        #macbook, ocker  
+duplo=$(tput setaf 57)           #macbook air, purple
 butterfinger=$(tput setaf 11)   #macbook retina, yellow pastel
-corny=$(tput setaf 28)          #raspberry, green
+dove=$(tput setaf 28)          #raspberry, green
+
 
 # server
 milkyway=$(tput setaf 123)      #ams1, whiteblue
