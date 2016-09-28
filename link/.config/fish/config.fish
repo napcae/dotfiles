@@ -29,3 +29,7 @@ end
 
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+#set locale
+export LANG=en_GB.UTF-8
+#export LC_ALL=en_UK.UTF-8
