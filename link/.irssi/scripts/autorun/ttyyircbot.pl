@@ -1,0 +1,1 @@
+/home/napcae/.irssi/scripts/ttyyircbot.pl
