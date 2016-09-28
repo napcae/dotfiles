@@ -9387,6 +9387,8 @@
 	<integer>13</integer>
 	<key>HotkeyCode</key>
 	<integer>36</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1179914</integer>
 	<key>IRMemory</key>
@@ -9402,13 +9404,11 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~/.dotfiles/link</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -9440,17 +9440,21 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>617 203 1007 189 0 0 2048 1257 </string>
+	<string>990 312 513 299 0 0 2048 1257 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>46 219 606 456 0 0 2048 1257 </string>
+	<string>269 777 606 456 0 0 2048 1257 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>824 847 400 129 0 0 2048 1257 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>714 649 620 392 0 0 2048 1257 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>1024 630 1024 627 0 0 2048 1257 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 90 599 505 0 0 2048 1257 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>580 478 918 507 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>39 736 914 514 0 0 2048 1257 </string>
+	<string>0 0 2048 1280 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>229 96 570 451 0 0 1680 1028 </string>
+	<string>266 148 570 429 0 0 2048 1257 </string>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537_selection</key>
@@ -14641,7 +14645,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
-			<false/>
+			<true/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -14779,32 +14783,18 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncLastTipTime</key>
-	<real>469204009.00551099</real>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<key>NoSyncConfirmBeta</key>
 	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>05F18E70-7A31-4644-B285-9C59A5A96C30</string>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
-	<key>NoSyncSuppressAnnyoingBellOffer</key>
-	<true/>
+	<false/>
+	<key>NoSyncTimeOfFirstLaunchForIncompatibilityWarnings</key>
+	<real>485080468.28966898</real>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>468379804.33109999</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>465811285.81815302</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>468723212.07863402</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-		<string>0003</string>
-	</array>
+	<real>484130045.00476801</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -14869,21 +14859,25 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml</string>
+	<string>https://iterm2.com/appcasts/nightly.xml?shard=98</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-06T15:01:15Z</date>
+	<date>2016-08-28T23:01:23Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.0.20160823-nightly</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
-	<true/>
+	<false/>
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -14911,8 +14905,6 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1427114496</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>https</key>
@@ -21867,7 +21859,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160313</string>
+	<string>3.0.20160822-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
