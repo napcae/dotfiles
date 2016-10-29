@@ -1,0 +1,15 @@
+sudo: required
+dist: trusty
+language: bash
+
+services:
+  - docker
+
+before_install:
+  - sudo apt-get -qq update 
+  - sudo apt-get --purge remove apparmor apparmor-utils libapparmor-perl libapparmor1
+  - sudo apt-get -y install curl
+
+script:
+  - bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
+  - source ~/.bashrc
