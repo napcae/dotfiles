@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/napcae/dotfiles.svg?branch=butterfinger)](https://travis-ci.org/napcae/dotfiles)
+
 # Dotfiles
 
 My OS X / Ubuntu dotfiles.
