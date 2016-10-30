@@ -7,7 +7,8 @@ env:
     init=/sbin/init
     run_opts=""
 
-services: docker
+services:
+  - docker
 
 before_install:
   - sudo docker pull buildpack-deps:xenial-scm
