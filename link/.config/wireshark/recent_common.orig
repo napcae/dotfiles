@@ -13,9 +13,7 @@ recent.capture_file: /Users/napcae/Downloads/fritzbox-vcc0_01.06.16_2017.eth
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
-recent.display_filter: http.content_type matches "audio/*"
-recent.display_filter: tcp.stream eq 18
-recent.display_filter: ip.addr == 193.104.92.12
+<<<<<<< HEAD
 recent.display_filter: tcp.stream eq 35
 recent.display_filter: ip.addr == 81.20.94.209
 recent.display_filter: tcp.stream eq 13
@@ -23,17 +21,33 @@ recent.display_filter: ip.addr == 40.115.0.184
 recent.display_filter: ip
 recent.display_filter: tcp.stream eq 2
 recent.display_filter: tcp.stream eq 1
+=======
+recent.display_filter: tcp.stream eq 6
+recent.display_filter: ip.addr == 192.168.10.205
+recent.display_filter: ip
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
+recent.display_filter: udp.stream eq 30
+recent.display_filter: dns
+recent.display_filter: udp
+recent.display_filter: i
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 99
-gui.geometry_main_y: 22
-gui.geometry_main_width: 1811
-gui.geometry_main_height: 1151
+<<<<<<< HEAD
+gui.geometry_main_x: 10
+gui.geometry_main_y: 33
+gui.geometry_main_width: 1009
+gui.geometry_main_height: 1211
+=======
+gui.geometry_main_x: 1920
+gui.geometry_main_y: 23
+gui.geometry_main_width: 1920
+gui.geometry_main_height: 1155
+>>>>>>> 9c4e59087cb5682f4fc57b84a7269c51a52f2688
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
-gui.geometry_main_maximized: FALSE
+gui.geometry_main_maximized: TRUE
 
 # Statusbar left pane size.
 # Decimal number.
