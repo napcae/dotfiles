@@ -1,15 +1,22 @@
 sudo: required
-dist: trusty
-language: bash
+env:
+  - >
+    container_id=$(mktemp)
+    distribution=ubuntu
+    version=16.04
+    init=/sbin/init
+    run_opts=""
 
 services:
   - docker
 
 before_install:
-  - sudo apt-get -qq update 
-  - sudo apt-get --purge remove apparmor apparmor-utils libapparmor-perl libapparmor1
-  - sudo apt-get -y install curl
+  - sudo docker pull buildpack-deps:xenial-scm
 
 script:
-  - bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
-  - source ~/.bashrc
+  - sudo docker run -dti buildpack-deps:xenial-scm bash > "${container_id}"
+  - sudo docker exec --tty "$(cat ${container_id})" bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
+  - sudo docker exec --tty "$(cat ${container_id})"  bash -c "source ~/.bashrc"
+
+notifications:
+  email: false
