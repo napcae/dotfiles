@@ -205,6 +205,20 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    awl_2 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_2 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -343,6 +357,8 @@ chatnets = {
     username = "napcae";
     realname = "napcae";
   };
+  hackint = { type = "IRC"; username = "napcae"; };
+  blinkenshell = { type = "IRC"; nick = "napcae"; username = "napcae"; };
 };
 servers = (
   {
@@ -365,6 +381,25 @@ servers = (
   {
     address = "irc.darkscience.net";
     chatnet = "darkscience";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.hackint.org";
+    chatnet = "hackint";
+    port = "9999";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_cafile = "/etc/ssl/certs/hackintSSLCA.crt";
+    ssl_capath = "/etc/ssl/certs";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.blinkenshell.org";
+    chatnet = "blinkenshell";
     port = "6697";
     use_ssl = "yes";
     ssl_verify = "yes";
