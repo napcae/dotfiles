@@ -32,8 +32,8 @@ sudoers_old="/etc/sudoers.d/sudoers-cowboy"; [[ -e "$sudoers_old" ]] && sudo rm 
 
 # Update APT.
 e_header "Updating APT"
-sudo apt-get -qq update
-sudo apt-get -qq upgrade
+sudo apt-get -qq -y update
+sudo apt-get -qq -y upgrade
 
 # Install APT packages.
 packages=(
@@ -58,7 +58,7 @@ done
 if (( ${#list[@]} > 0 )); then
   e_header "Installing APT packages: ${list[*]}"
   for package in "${list[@]}"; do
-    sudo apt-get -qq install "$package"
+    sudo apt-get -qq -y install "$package"
   done
 fi
 
