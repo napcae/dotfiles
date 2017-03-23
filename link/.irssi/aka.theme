@@ -299,7 +299,7 @@ formats = {
     nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
     your_nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \003\00300$[-10]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \003\00305$[-10]0}}$1";
     own_msg = "{ownmsgnick {ownnick $[-16]0$2}}$1";
     own_msg_channel = "{ownmsgnick {ownnick $[-16]0$3}{msgchannel $1}}$2";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-16]2}}$1";

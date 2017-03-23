@@ -413,5 +413,12 @@ channels = (
   { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#mailstache"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#respiratio"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#sysadmin"; chatnet = "darkscience"; autojoin = "yes"; }
+  { name = "#sysadmin"; chatnet = "darkscience"; autojoin = "yes"; },
+  { name = "##digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { 
+    name = "#blinkenshell";
+    chatnet = "blinkenshell";
+    autojoin = "yes";
+  },
+  { name = "#digitalpuddle"; chatnet = "freenode"; autojoin = "yes"; }
 );
