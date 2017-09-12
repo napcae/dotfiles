@@ -10,7 +10,7 @@ begin
 end
 
 function subl
-    open -a "Sublime Text 2.app" $argv
+    open -a "Sublime Text.app" $argv
 end
 
 function chrome
@@ -27,8 +27,6 @@ function google
    open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
 end
 
-set -x GOPATH $HOME/go
-set -x PATH $HOME/go/bin $PATH
 
 # Start or re-use a gpg-agent.
 #
@@ -42,7 +40,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # Gotham Shell
 #eval sh $HOME/.config/gotham/gotham.sh
-set -U -x HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
+#set -U -x HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
