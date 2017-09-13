@@ -46,3 +46,5 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
+
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
