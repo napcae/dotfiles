@@ -40,7 +40,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # Gotham Shell
 #eval sh $HOME/.config/gotham/gotham.sh
-#set -U -x HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
