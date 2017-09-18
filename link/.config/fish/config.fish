@@ -47,3 +47,4 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
