@@ -1,3 +1,3 @@
-function ls
-	command ls -lGa $argv
+function ls --description "List contents of directory"
+	command ls -lGha $argv
 end
