@@ -40,6 +40,9 @@ if [[ "$(type -P brew)" ]]; then
    youtube-dl \
    lynx \
    autojump \
+   ansible \
+   tig \
+   terraform \
    ack)
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
