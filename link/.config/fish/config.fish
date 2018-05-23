@@ -47,5 +47,11 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 status --is-interactive; and source (rbenv init -|psub)
+
+export KOPS_STATE_STORE=s3://clusters.k8s.aws.funkedigital.de
+
+function ks
+    kubectl $argv
+end
