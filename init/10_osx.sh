@@ -30,6 +30,7 @@ if [[ "$(type -P brew)" ]]; then
    tree \
    curl \
    wget \
+   rbenv \
    lesspipe \
    irssi \
    screen \
@@ -38,11 +39,13 @@ if [[ "$(type -P brew)" ]]; then
    htop-osx \
    mobile-shell \
    youtube-dl \
-   lynx \
+   ffmpeg \
    autojump \
    ansible \
-   tig \
    terraform \
+   kubernetes-cli
+   awscli \
+   ykman \
    ack)
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
@@ -52,7 +55,14 @@ if [[ "$(type -P brew)" ]]; then
   fi
 
   cask_recipes=(google-chrome \
-    slate \
+    docker \
+    amethyst \
+    keybase \
+    sublime-text \
+    telegram \
+    vlc \
+    whatsapp \
+    yate \
     nvalt
   )
 
