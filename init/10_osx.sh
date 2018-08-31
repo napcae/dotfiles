@@ -28,6 +28,8 @@ if [[ "$(type -P brew)" ]]; then
   # Install Homebrew recipes.
   recipes=(git\
    tree \
+   jq \
+   tldr \
    curl \
    wget \
    rbenv \
@@ -48,6 +50,8 @@ if [[ "$(type -P brew)" ]]; then
    ykman \
    diff-so-fancy \
    prettyping \
+   ncdu
+   fd
    ack)
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
