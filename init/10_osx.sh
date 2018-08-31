@@ -46,6 +46,8 @@ if [[ "$(type -P brew)" ]]; then
    kubernetes-cli
    awscli \
    ykman \
+   diff-so-fancy \
+   prettyping \
    ack)
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
@@ -77,8 +79,4 @@ if [[ "$(type -P brew)" ]]; then
   fi
   
 
-  if [[ ! "$(type -P gcc-4.2)" ]]; then
-    e_header "Installing Homebrew dupe recipe: apple-gcc42"
-    brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb
-  fi
 fi
