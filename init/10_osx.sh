@@ -69,6 +69,7 @@ if [[ "$(type -P brew)" ]]; then
     amethyst \
     keybase \
     sublime-text \
+    macdown
     telegram \
     vlc \
     whatsapp \
