@@ -55,6 +55,10 @@ if [[ "$(type -P brew)" ]]; then
   fi
 
   cask_recipes=(google-chrome \
+    1password \
+    flux \
+    gpg-suite \
+    keybase \
     docker \
     amethyst \
     keybase \
