@@ -9804,9 +9804,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1890 1016 796 486 -2560 119 2560 1417 </string>
+	<string>1649 965 918 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-2282 409 2001 1085 -2560 119 2560 1417 </string>
+	<string>117 274 2019 1040 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537_selection</key>
@@ -15188,7 +15188,7 @@
 				</dict>
 			</array>
 			<key>Space</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tab Color</key>
@@ -16038,12 +16038,25 @@
 			<string>/Users/napcae/Downloads</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>CA9E4D24-0D7B-4E7F-9434-1ABC1C0AFFC1</string>
+	<key>NoSyncLastTipTime</key>
+	<real>557047213.70692599</real>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>555845476.70005798</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>

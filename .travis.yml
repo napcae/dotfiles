@@ -11,12 +11,12 @@ services:
   - docker
 
 before_install:
-  - sudo docker pull buildpack-deps:xenial-scm
+  - docker pull buildpack-deps:xenial-scm
 
 script:
-  - sudo docker run -dti buildpack-deps:xenial-scm bash > "${container_id}"
-  - sudo docker exec --tty "$(cat ${container_id})" bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
-  - sudo docker exec --tty "$(cat ${container_id})"  bash -c "source ~/.bashrc"
+  - docker run -dti buildpack-deps:xenial-scm bash > "${container_id}"
+  - docker exec --tty "$(cat ${container_id})" bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
+  - docker exec --tty "$(cat ${container_id})"  bash -c "source ~/.bashrc"
 
 notifications:
   email: false
