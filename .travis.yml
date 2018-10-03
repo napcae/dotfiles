@@ -15,6 +15,7 @@ before_install:
 
 script:
   - docker run -dti buildpack-deps:xenial-scm bash > "${container_id}"
+  - docker exec --tty "$(cat ${container_id})"  bash -c "ssh-keyscan github.com >> ~/.ssh/known_host"
   - docker exec --tty "$(cat ${container_id})" bash -c "$(curl -fsSL https://raw.github.com/napcae/dotfiles/master/bin/dotfiles)"
   - docker exec --tty "$(cat ${container_id})"  bash -c "source ~/.bashrc"
 
