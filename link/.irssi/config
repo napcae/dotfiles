@@ -354,12 +354,11 @@ channels = (
   { name = "##security"; chatnet = "freenode"; autojoin = "yes"; }
 );
 windows = {
-  1 = {
+  1 = { 
     immortal = "yes";
     name = "(status)";
     level = "ALL";
     sticky = "yes";
-    parent = "5";
   };
   2 = {
     items = (
@@ -371,7 +370,7 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
   3 = {
     items = (
@@ -383,7 +382,7 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
   4 = {
     items = (
@@ -395,7 +394,7 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
   5 = {
     items = (
@@ -407,6 +406,7 @@ windows = {
       }
     );
     sticky = "yes";
+    parent = "1";
   };
   6 = {
     items = (
@@ -418,9 +418,8 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "7";
   };
-  7 = { name = "hilight"; sticky = "yes"; };
+  7 = { name = "hilight"; sticky = "yes"; parent = "6"; };
   8 = {
     items = (
       {
@@ -431,7 +430,7 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
   9 = {
     items = (
@@ -443,7 +442,7 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
   10 = {
     items = (
@@ -455,10 +454,10 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "5";
+    parent = "1";
   };
 };
 mainwindows = {
-  5 = { first_line = "8"; lines = "54"; };
-  7 = { first_line = "0"; lines = "8"; };
+  1 = { first_line = "8"; lines = "54"; };
+  6 = { first_line = "0"; lines = "8"; };
 };
