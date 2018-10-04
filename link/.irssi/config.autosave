@@ -50,6 +50,7 @@ aliases = {
   l = "mark";
   ns = "/msg NickServ";
   cs = "/msg ChanServ";
+  addallchannels = "script exec foreach my \\$channel (Irssi::channels()) { Irssi::command(\"channel add -auto \\$channel->{name} \\$channel->{server}->{tag} \\$channel->{key}\")\\;}";
 };
 
 statusbar = {
@@ -67,22 +68,25 @@ statusbar = {
     topicbarend = "{topicsbend}";
 
     # treated "normally", you could change the time/user name to whatever
-    time = "{sb $Z}";
-    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+    time = "%K {sb %G$Z}%K {sbaway $A} %g$topic%K";
+    user = "{sb {sbnickmode $cumode}{sbmode $usermode}}";
 
     # treated specially .. window is printed with non-empty windows,
     # window_empty is printed with empty windows
-    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
-    window_empty = "{sb $winref{sbservertag $tag}}";
-    prompt = "{prompt $[.15]itemname}";
+
+    window = "";
+    #window_empty = "{sb %C{sbservertag $tag}}%n";   
+    window_empty = "{sb $winref/{sbservertag $tag}}";
+    #prompt = "$winref%K/{prompt $[.15]itemname}";
+    prompt = "";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
 
     # all of these treated specially, they're only displayed when needed
     lag = "{sb Lag: $0-}";
-    act = "{sb Act: $0-}";
-    more = "-- more --";
+    act = "{sb $0-}";
+    more = "-- %Ymore below%n --";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -97,7 +101,7 @@ statusbar = {
       # window, root
       type = "window";
       # top, bottom
-      placement = "bottom";
+      placement = "top";
       # number
       position = "1";
       # active, inactive, always
@@ -113,7 +117,6 @@ statusbar = {
         lag = { priority = "-1"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
-        usercount = { };
       };
     };
 
@@ -130,6 +133,7 @@ statusbar = {
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
     };
 
     # we treat input line as yet another statusbar :) It's possible to
@@ -138,21 +142,16 @@ statusbar = {
       type = "root";
       placement = "bottom";
       # we want to be at the bottom always
-      position = "100";
-      visible = "always";
-      items = {
-        prompt = { priority = "-1"; };
-        prompt_empty = { priority = "-1"; };
-        # treated specially, this is the real input line.
-        input = { priority = "10"; };
-      };
+      position = "1";
+      visible = "active";
+      items = { input = { }; };
     };
 
     # topicbar
     topic = {
       type = "root";
       placement = "top";
-      position = "1";
+      position = "2";
       visible = "always";
       items = {
         topicbarstart = { priority = "100"; };
@@ -160,7 +159,45 @@ statusbar = {
         topic_empty = { };
         topicbarend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
     };
+    window_add = { items = { }; disabled = "yes"; };
+    add = { disabled = "yes"; };
+    delete = { disabled = "yes"; };
+    prompt_empty = { position = "0"; disabled = "yes"; };
+    #   rollestatus = { items = {  = { }; }; disabled = "yes"; };
+    #   status = { items = { }; disabled = "yes"; };
+    #   rollstatus = { disabled = "yes"; };
+    asd = {
+      position = "0";
+      placement = "bottom";
+      items = { };
+      disabled = "yes";
+    };
+    topic_empty = { disabled = "yes"; };
+    remove = { items = { }; disabled = "yes"; };
+    channels = { items = { chanact = { }; }; disabled = "yes"; };
+    statusbar = {
+
+      #rollen statusbar:
+
+      items = {
+        #           barstart = "--------------";
+        erotin = {
+          items = { barstart = "asdasd--------------"; };
+          priority = "100";
+          alignment = "left";
+          disabled = "no";
+          placement = "bottom";
+          position = "0";
+        };
+      };
+    };
+
+
+    "-before" = { disabled = "yes"; };
+    aw1_0 = { position = "0"; disabled = "yes"; };
+    empty = { placement = "bottom"; position = "0"; disabled = "yes"; };
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
@@ -186,22 +223,40 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
-    theme = "aka.theme";
+    theme = "aka";
     term_charset = "utf-8";
     autolog = "yes";
     bell_beeps = "yes";
   };
   "perl/core/scripts" = {
-    awl_viewer = "no";
-    awl_block = "10";
+    awl_all_disable = "no";
+    awl_automode = "sbar";
+    awl_block = "20";
+    awl_columns = "1";
+    awl_display_key = "%K%0$H $N %N";
+    awl_display_key_active = "%1 %W$C %N";
+    awl_display_nokey = "%K%0$H $N %N";
+    awl_display_nokey_active = "%1 %W$C %N";
+    awl_height_adjust = "1";
+    awl_hide_data = "0";
+    awl_maxlines = "9";
+    awl_placement = "bottom";
+    awl_position = "0";
+    awl_prefer_name = "yes";
+    awl_sbar_maxlength = "yes";
+    awl_separator = "%N %N";
+    awl_sort = "refnum";
     trackbar_style = "%w";
+    awl_viewer = "no";
+    ttyyircbot_api_token = "B5771FEC-2120-B04B-89EC-AEB97B0F3CCB";
   };
 };
 ignores = (
   { mask = "SysJo"; level = "ALL"; },
   { mask = "kevbot"; level = "ALL"; },
   { mask = "Rev|SleepingFox"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS MODES NICKS"; }
+  { level = "JOINS PARTS QUITS MODES NICKS"; },
+  { mask = "Woet"; level = "ALL"; }
 );
 logs = { };
 hilights = ( { text = "napcae"; nick = "yes"; word = "yes"; } );
@@ -210,36 +265,132 @@ keyboard = (
   { key = "^L"; id = "command"; data = "mark "; },
   { key = "meta-z"; id = "change_window"; data = "16"; }
 );
+chatnets = {
+  freenode = {
+    type = "IRC";
+    nick = "napcae";
+    autosendcmd = "/msg nickserv identify 1810cTn1991 ;wait 2000";
+  };
+  "bn-ulm" = { 
+    type = "IRC";
+    nick = "napcae";
+    realname = "Chi Trung Nguyen";
+  };
+  darkscience = {
+    type = "IRC";
+    nick = "napcae";
+    username = "napcae";
+    realname = "napcae";
+  };
+  alpharatio = {
+    type = "IRC";
+    nick = "hjklhma";
+    autosendcmd = "/^msg voyager enter OwdMNh9sF5Y;wait 2000";
+  };
+  hashbang = { type = "IRC"; };
+  hackint = { type = "IRC"; };
+};
+servers = (
+  {
+    address = "chat.freenode.net";
+    chatnet = "freenode";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.bn-ulm.de";
+    chatnet = "bn-ulm";
+    port = "6669";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.darkscience.net";
+    chatnet = "darkscience";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.alpharatio.cc";
+    chatnet = "alpharatio";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.hashbang.sh";
+    chatnet = "hashbang";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.hackint.org";
+    chatnet = "hackint";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+channels = (
+  { name = "#machomebrew"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#mailstache"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#sysadmin"; chatnet = "darkscience"; autojoin = "yes"; },
+  { name = "##digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#digitalpuddle"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#!"; chatnet = "hashbang"; autojoin = "yes"; },
+  { name = "#alpharatio"; chatnet = "alpharatio"; autojoin = "yes"; },
+  { name = "##security"; chatnet = "freenode"; autojoin = "yes"; }
+);
 windows = {
   1 = {
     immortal = "yes";
     name = "(status)";
     level = "ALL";
     sticky = "yes";
-    parent = "2";
+    parent = "5";
   };
   2 = {
     items = (
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#digitalocean";
+        name = "#digitalpuddle";
         tag = "freenode";
       }
     );
     sticky = "yes";
+    parent = "5";
   };
   3 = {
     items = (
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#anapnea";
+        name = "##security";
         tag = "freenode";
       }
     );
     sticky = "yes";
-    parent = "2";
+    parent = "5";
   };
   4 = {
     items = (
@@ -251,19 +402,18 @@ windows = {
       }
     );
     sticky = "yes";
-    parent = "2";
+    parent = "5";
   };
   5 = {
     items = (
       {
-        type = "QUERY";
+        type = "CHANNEL";
         chat_type = "IRC";
-        name = "ChanServ";
-        tag = "freenode";
+        name = "#!";
+        tag = "hashbang";
       }
     );
     sticky = "yes";
-    parent = "7";
   };
   6 = {
     items = (
@@ -278,40 +428,44 @@ windows = {
     parent = "7";
   };
   7 = { name = "hilight"; sticky = "yes"; };
-};
-mainwindows = {
-  2 = { first_line = "9"; lines = "43"; };
-  7 = { first_line = "1"; lines = "8"; };
-};
-chatnets = {
-  freenode = { type = "IRC"; nick = "napcae"; };
-  "bn-ulm" = { 
-    type = "IRC";
-    nick = "napcae";
-    realname = "Chi Trung Nguyen";
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#alpharatio";
+        tag = "alpharatio";
+      }
+    );
+    sticky = "yes";
+    parent = "5";
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sysadmin";
+        tag = "darkscience";
+      }
+    );
+    sticky = "yes";
+    parent = "5";
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#mailstache";
+        tag = "freenode";
+      }
+    );
+    sticky = "yes";
+    parent = "5";
   };
 };
-servers = (
-  {
-    address = "chat.freenode.net";
-    chatnet = "freenode";
-    port = "7000";
-    use_ssl = "yes";
-    ssl_verify = "yes";
-    ssl_capath = "/etc/ssl/certs";
-    autoconnect = "yes";
-  },
-  {
-    address = "irc.bn-ulm.de";
-    chatnet = "bn-ulm";
-    port = "6667";
-    use_ssl = "no";
-    ssl_verify = "no";
-    autoconnect = "yes";
-  }
-);
-channels = (
-  { name = "#machomebrew"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#anapnea"; chatnet = "freenode"; autojoin = "yes"; }
-);
+mainwindows = {
+  5 = { first_line = "8"; lines = "54"; };
+  7 = { first_line = "0"; lines = "8"; };
+};
