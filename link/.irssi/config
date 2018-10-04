@@ -205,13 +205,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -465,6 +458,6 @@ windows = {
   };
 };
 mainwindows = {
-  1 = { first_line = "8"; lines = "42"; };
+  1 = { first_line = "8"; lines = "54"; };
   6 = { first_line = "0"; lines = "8"; };
 };

@@ -11,7 +11,7 @@ butterfinger=$(tput setaf 11)   #macbook retina, yellow pastel
 
 # server
 milkyway=$(tput setaf 123)      #ams1, whiteblue
-duplo=$(tput setaf 57)           #ams1, purple
+twix=$(tput setaf 57)           #ams1, purple
 dove=$(tput setaf 28)          #raspberry, green
 
 hostn=`hostname -s`
@@ -80,8 +80,8 @@ case $hostn in
 bounty)
     PROMPT_DEVICE_COLOR=$bounty
     ;;
-duplo)
-    PROMPT_DEVICE_COLOR=$duplo
+twix)
+    PROMPT_DEVICE_COLOR=$twix
     ;;
 butterfinger)
     PROMPT_DEVICE_COLOR=$butterfinger

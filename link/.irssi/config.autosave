@@ -181,6 +181,27 @@ statusbar = {
 
       #rollen statusbar:
 
+<<<<<<< HEAD
+      items = {
+        #           barstart = "--------------";
+        erotin = {
+          items = { barstart = "asdasd--------------"; };
+          priority = "100";
+          alignment = "left";
+          disabled = "no";
+          placement = "bottom";
+          position = "0";
+        };
+      };
+    };
+
+
+    "-before" = { disabled = "yes"; };
+    aw1_0 = { position = "0"; disabled = "yes"; };
+    empty = { placement = "bottom"; position = "0"; disabled = "yes"; };
+    awl_0 = {
+=======
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
       items = {
         #           barstart = "--------------";
         erotin = {
@@ -202,13 +223,6 @@ statusbar = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
@@ -355,10 +369,21 @@ channels = (
   { name = "#mailstache"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#sysadmin"; chatnet = "darkscience"; autojoin = "yes"; },
   { name = "##digitalocean"; chatnet = "freenode"; autojoin = "yes"; },
+<<<<<<< HEAD
   { name = "#digitalpuddle"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#!"; chatnet = "hashbang"; autojoin = "yes"; },
   { name = "#alpharatio"; chatnet = "alpharatio"; autojoin = "yes"; },
   { name = "##security"; chatnet = "freenode"; autojoin = "yes"; }
+=======
+  { 
+    name = "#blinkenshell";
+    chatnet = "blinkenshell";
+    autojoin = "yes";
+  },
+  { name = "#digitalpuddle"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "##!"; chatnet = "hashbang"; autojoin = "yes"; },
+  { name = "#!"; chatnet = "hashbang"; autojoin = "yes"; }
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
 );
 windows = {
   1 = {
@@ -366,7 +391,11 @@ windows = {
     name = "(status)";
     level = "ALL";
     sticky = "yes";
+<<<<<<< HEAD
     parent = "5";
+=======
+    parent = "11";
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
   };
   2 = {
     items = (
@@ -378,42 +407,34 @@ windows = {
       }
     );
     sticky = "yes";
+<<<<<<< HEAD
     parent = "5";
+=======
+    parent = "11";
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
   };
-  3 = {
+  3 = { sticky = "yes"; parent = "11"; };
+  4 = { sticky = "yes"; parent = "11"; };
+  5 = {
     items = (
       {
         type = "CHANNEL";
         chat_type = "IRC";
+<<<<<<< HEAD
         name = "##security";
         tag = "freenode";
       }
     );
     sticky = "yes";
     parent = "5";
-  };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#machomebrew";
-        tag = "freenode";
-      }
-    );
-    sticky = "yes";
-    parent = "5";
-  };
-  5 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
+=======
         name = "#!";
         tag = "hashbang";
       }
     );
     sticky = "yes";
+    parent = "11";
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
   };
   6 = {
     items = (
@@ -425,8 +446,56 @@ windows = {
       }
     );
     sticky = "yes";
+<<<<<<< HEAD
+    parent = "5";
+=======
     parent = "7";
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
   };
+  7 = { name = "hilight"; sticky = "yes"; };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+<<<<<<< HEAD
+        name = "#!";
+        tag = "hashbang";
+      }
+    );
+    sticky = "yes";
+=======
+        name = "#alpharatio";
+        tag = "alpharatio";
+      }
+    );
+    sticky = "yes";
+    parent = "11";
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
+  };
+  9 = { sticky = "yes"; parent = "7"; };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sysadmin";
+        tag = "darkscience";
+      }
+    );
+  };
+  11 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#mailstache";
+        tag = "freenode";
+      }
+    );
+    sticky = "yes";
+  };
+<<<<<<< HEAD
   7 = { name = "hilight"; sticky = "yes"; };
   8 = {
     items = (
@@ -468,4 +537,10 @@ windows = {
 mainwindows = {
   5 = { first_line = "8"; lines = "54"; };
   7 = { first_line = "0"; lines = "8"; };
+=======
+};
+mainwindows = {
+  11 = { first_line = "9"; lines = "61"; };
+  7 = { first_line = "0"; lines = "9"; };
+>>>>>>> 00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda
 };

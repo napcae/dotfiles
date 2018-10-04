@@ -299,8 +299,9 @@ formats = {
     nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
     your_nick_changed = "{channick $[-13]0} %Y= {channick_hilight $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \003\00303$[-10]0}}$1";
-    own_msg = "{ownmsgnick {ownnick $[-16]0$2}}$1";
+    HEAD = "pubmsg";
+    pubmsg = "{pubmsgnick $2 {pubnick \003\00313$[-10]0}}$1";
+    00c41489dd6c1bd13b9b8fcd1ae883af3a0c2eda = "own_msg";
     own_msg_channel = "{ownmsgnick {ownnick $[-16]0$3}{msgchannel $1}}$2";
     own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-16]2}}$1";
     pubmsg_me = "{pubmsgmenick {menick $[-16]0}$2}$1";
@@ -313,6 +314,7 @@ formats = {
     new_topic = "        %ctopic %K= %|%B'$2' %non %b$1%n%K[set by {nick %y$0}]";
 
     endofnames = "               Total of {hilight $1} nicks {comment {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal}";
+    own_msg = "{ownmsgnick {ownnick $[-16]0$2}}$1";
   };
   "fe-common/irc" = {
     own_action = "{ownaction $[-14]0} $1";
