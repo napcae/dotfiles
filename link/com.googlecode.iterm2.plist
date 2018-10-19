@@ -9806,7 +9806,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>1649 965 918 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>117 274 2019 1040 0 0 2560 1417 </string>
+	<string>294 133 2069 1160 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_5B3D5EA5-B08F-4ADD-BA1E-A71AE44F9537_selection</key>
@@ -16159,7 +16159,6 @@
 		<string>Notes</string>
 		<string>Paste History</string>
 		<string>Jobs</string>
-		<string>Profiles</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
