@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -s http://checkip.dyndns.org | sed 's/[a-zA-Z/<> :]//g' | tr -d '\r'
+dig +short myip.opendns.com @resolver1.opendns.com
