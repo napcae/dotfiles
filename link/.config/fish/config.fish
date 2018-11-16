@@ -47,9 +47,13 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
-#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
 status --is-interactive; and source (rbenv init -|psub)
 
 function ks
     kubectl $argv
 end
+
+export LIBRATO_TOKEN=(cat ~/.librato/token)
+export HOMEBREW_GITHUB_API_TOKEN=(cat ~/.HOMEBREW_GITHUB_API_TOKEN)
+
