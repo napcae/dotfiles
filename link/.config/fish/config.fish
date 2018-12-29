@@ -50,10 +50,6 @@ export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 export PATH="$PATH:$HOME/go/bin"
 status --is-interactive; and source (rbenv init -|psub)
 
-function ks
-    kubectl $argv
-end
-
 export LIBRATO_TOKEN=(cat ~/.librato/token)
 export HOMEBREW_GITHUB_API_TOKEN=(cat ~/.HOMEBREW_GITHUB_API_TOKEN)
 
