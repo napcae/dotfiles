@@ -13,15 +13,6 @@ function subl
     open -a "Sublime Text.app" $argv
 end
 
-function chrome
-   if count $argv > /dev/null
-     /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $argv;
-     open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
-   else  
-     open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
-   end  
-end
-
 function google
    /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "http://www.google.de/search?q=$argv";
    open /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app
@@ -42,14 +33,27 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 #eval sh $HOME/.config/gotham/gotham.sh
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -gx PATH ~/code/cf-aws-login/bin ~/code/cf-infra-stacks/bin $PATH
 
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin:$HOME/.okta/bin/"
 status --is-interactive; and source (rbenv init -|psub)
 
 export LIBRATO_TOKEN=(cat ~/.librato/token)
+export GITHUB_OATH=(cat ~/.github-token)
+export OKTA_API_KEY=(cat ~/.okta-token)
 export HOMEBREW_GITHUB_API_TOKEN=(cat ~/.HOMEBREW_GITHUB_API_TOKEN)
 
+export OKTA_STS_DURATION=28800
+export OKTA_USERNAME=trung@contentful.com
+export OKTA_MFA_CHOICE=OKTA.push
+
+export CF_EMAIL="trung@contentful.com"
+export DOCKER_REGISTRY=806120774687.dkr.ecr.us-east-1.amazonaws.com
+
+alias ks="kubectl"
+set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
+direnv hook fish | source

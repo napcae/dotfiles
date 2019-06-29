@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 2.0.3.
+# Recent settings file for Wireshark 2.6.4.
 #
 # This file is regenerated each time Wireshark is quit.
 # So be careful, if you want to make manual changes here.
@@ -7,6 +7,7 @@
 
 recent.capture_file: /Users/napcae/Downloads/fritzbox-vcc16_01.06.16_2004.eth
 recent.capture_file: /Users/napcae/Downloads/fritzbox-vcc0_01.06.16_2017.eth
+recent.capture_file: /Users/napcae/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/CC0EB00D-4034-400B-881D-3A8358FB5A19/all.pcap
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
@@ -26,10 +27,12 @@ recent.display_filter: tcp.stream eq 1
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 99
-gui.geometry_main_y: 22
-gui.geometry_main_width: 1811
-gui.geometry_main_height: 1151
+gui.geometry_main_x: 840
+gui.geometry_main_y: 537
+gui.gtk.geometry_main_x: 20
+gui.gtk.geometry_main_y: 20
+gui.geometry_main_width: 840
+gui.geometry_main_height: 530
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
