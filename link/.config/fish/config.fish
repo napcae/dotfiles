@@ -57,3 +57,5 @@ export DOCKER_REGISTRY=806120774687.dkr.ecr.us-east-1.amazonaws.com
 alias ks="kubectl"
 set -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
 direnv hook fish | source
+
+set -x -U GOPATH $HOME/code

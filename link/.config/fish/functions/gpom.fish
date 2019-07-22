@@ -1,4 +1,5 @@
-# Defined in /var/folders/0y/pcc55wz96nv3t7kr_s4n8n5w0000gn/T//fish.H5WZuF/gpom.fish @ line 1
+# Defined in /var/folders/j_/8cpj3cg1575_6lkj8tqpwzlc0000gn/T//fish.WsV5G0/gpom.fish @ line 2
 function gpom
+	git checkout master
 	git pull origin master
 end

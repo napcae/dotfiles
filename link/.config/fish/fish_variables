@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:vim
+SETUVAR --export --path GOPATH:/Users/napcae/code
 SETUVAR --export KUBECONFIG:/Users/napcae/\x2ekube/cf\x2dauthinfo\x2eyaml\x3a/Users/napcae/\x2ekube/cf\x2dproduction\x2eyaml\x3a/Users/napcae/\x2ekube/cf\x2dbi\x2eyaml\x3a/Users/napcae/\x2ekube/cf\x2dstaging\x2eyaml\x3a/Users/napcae/\x2ekube/cf\x2dpreview\x2eyaml\x3a/Users/napcae/\x2ekube/cf\x2dtools\x2eyaml
 SETUVAR --export KUBEUSER:trung\x40contentful\x2ecom
 SETUVAR __fish_init_2_39_8:\x1d
